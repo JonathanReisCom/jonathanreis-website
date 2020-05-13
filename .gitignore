@@ -1,0 +1,19 @@
+# OSX
+.DS_Store
+
+# NodeJs
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# NextJs
+.next/
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+!debug.keystore
+
+# Assets
+/.htaccess

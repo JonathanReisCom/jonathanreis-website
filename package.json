@@ -1,0 +1,69 @@
+{
+  "name": "jonathanreis-website",
+  "version": "1.0.0",
+  "description": "NextJS Version of 'www.jonathanreis.com' by Jonathan Reis (https://github.com/JonathanReisCom)",
+  "main": "index.jsx",
+  "scripts": {
+    "prod": "npm run a && npm run b && npm run c && npm run d && npm run e",
+    "a": "echo 'Setting permissions...' && chown -R jonathanreis:jonathanreis /home/jonathanreis/public_html/api/",
+    "b": "echo 'Installing modules...' && npm install",
+    "c": "echo 'Building...' && NODE_ENV=production next build",
+    "d": "echo 'Deleting older build...' && pm2 delete 'jonathanreis.com'",
+    "e": "echo 'Adding new build...' && pm2 start npm --name 'jonathanreis.com' -- start",
+    "---": "---",
+    "dev": "NODE_ENV=development next",
+    "start": "NODE_ENV=development next start",
+    "----": "---",
+    "local": "yarn l_a && yarn l_b",
+    "l_a": "yarn install",
+    "l_b": "NODE_ENV=localhost next build ",
+    "-----": "---"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanReisCom/jonathanreis-website.git"
+  },
+  "keywords": [
+    "next",
+    "nextjs",
+    "react",
+    "reactjs",
+    "npx",
+    "material",
+    "material-design",
+    "material-kit",
+    "material-kit-react",
+    "next-material-kit"
+  ],
+  "author": "Jonathan Reis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanReisCom/jonathanreis-website/issues"
+  },
+  "homepage": "https://jonathanreis.com",
+  "dependencies": {
+    "@material-ui/core": "4.9.13",
+    "@material-ui/icons": "4.9.1",
+    "@zeit/next-sass": "1.0.1",
+    "classnames": "2.2.6",
+    "isomorphic-unfetch": "^3.0.0",
+    "moment": "2.25.3",
+    "next": "^9.3.6",
+    "next-compose-plugins": "2.2.0",
+    "next-images": "1.4.0",
+    "next-seo": "^4.4.0",
+    "nextjs-redirect": "2.0.2",
+    "node-sass": "4.14.1",
+    "nouislider": "14.4.0",
+    "path": "0.12.7",
+    "prop-types": "15.7.2",
+    "react": "^16.13.1",
+    "react-datetime": "2.16.3",
+    "react-dom": "^16.13.1",
+    "react-slick": "0.25.2",
+    "react-swipeable-views": "0.13.9",
+    "styled-components": "^5.1.0",
+    "swr": "^0.2.0",
+    "webpack": "4.43.0"
+  }
+}
