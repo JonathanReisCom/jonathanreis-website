@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 // @material-ui/core components
 import { ServerStyleSheets } from '@material-ui/core/styles';
 // My Components
-import GoogleAnalytics from 'components/GoogleAnalytics';
+
 // Style
 import theme from '../components/Theme';
 
@@ -21,7 +21,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
           />
           <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet" />
-          <GoogleAnalytics />
         </Head>
         <body>
           <Main />

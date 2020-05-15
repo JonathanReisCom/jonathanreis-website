@@ -1,26 +1,31 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 
 const Component = () => {
   const myGoogleTag = 'UA-48816576-2';
 
-  return (
-    <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${myGoogleTag}`}></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+  const registerPageView = () => {
+    let pathname = window.location.pathname;
+    if (pathname == '/') {
+      pathname = 'index';
+    }
+    // console.log(`Logging pageview for ${pathname}`);
+    // console.log('------------', process.env.NODE_ENV);
+    if (process.env.NODE_ENV == 'production') {
+      ReactGA.set({ page: pathname });
+      ReactGA.pageview(pathname);
+    }
+  };
 
-            gtag('config', '${myGoogleTag}');
-          </script>
-          `,
-        }}
-      />
-    </>
-  );
+  React.useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      ReactGA.initialize(myGoogleTag);
+      window.GA_INITIALIZED = true;
+    }
+    registerPageView();
+  }, []);
+
+  return null;
 };
 
 export default Component;

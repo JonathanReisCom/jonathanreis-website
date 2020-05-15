@@ -5,12 +5,13 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 // My Components
+import SEO from 'components/Seo';
+import GoogleAnalytics from 'components/GoogleAnalytics';
 import TopMenuBar from 'components/TopMenuBar/TopMenuBar';
 import Header from 'components/Containers/Header';
 import Section from 'components/Containers/Section';
 import SubSection from 'components/Containers/SubSection';
 import Bold from 'components/Bold';
-import SEO from 'components/Seo';
 import Profile from 'components/SubSections/Profile';
 // Images
 import logo from 'assets/img/bg4.jpg';
@@ -59,6 +60,7 @@ const Index = (props) => {
   return (
     <>
       <SEO />
+      <GoogleAnalytics />
 
       <TopMenuBar />
 
@@ -66,9 +68,10 @@ const Index = (props) => {
 
       <Section raised>
         <Profile />
+      </Section>
 
-        <SubSection color={'red'} overBottom>
-          {/* <Grid container>
+      {/* <SubSection color={'red'} overBottom> */}
+      {/* <Grid container>
             <Grid item xs={12} sm={4} md={4}>
               <Paper className={classes.paper}>{loremIpsun}</Paper>
             </Grid>
@@ -79,9 +82,9 @@ const Index = (props) => {
               <Paper className={classes.paper}>{loremIpsun}</Paper>
             </Grid>
           </Grid> */}
-        </SubSection>
+      {/* </SubSection> */}
 
-        {/* <SubSection>
+      {/* <SubSection>
           <Grid container>
             <Grid item xs={12} sm={6} md={6}>
               <Paper className={classes.paper}>{loremIpsun}</Paper>
@@ -94,7 +97,7 @@ const Index = (props) => {
         </SubSection>
       </Section> */}
 
-        {/* <Section>
+      {/* <Section>
         <SubSection>
           <Grid container>
             <Grid item xs={12} sm={6} md={6}>
@@ -104,7 +107,7 @@ const Index = (props) => {
         </SubSection>
       </Section> */}
 
-        {/* <Section raised>
+      {/* <Section raised>
         <SubSection>
           <Grid container>
             {textElements.map((value, index) => {
@@ -120,7 +123,6 @@ const Index = (props) => {
             })}
           </Grid>
         </SubSection> */}
-      </Section>
     </>
   );
 };
