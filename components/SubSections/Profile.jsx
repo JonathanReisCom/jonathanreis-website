@@ -11,24 +11,31 @@ import Bold from 'components/Bold';
 
 // Style
 import theme from 'components/Theme';
+const padding = theme.sizes.subSectionPadding;
+const avatarSize = 160;
 const localStyle = {
-  containerProfile: {
-    textAlign: 'center',
-    marginBottom: '3rem',
-  },
   containerAvatar: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: `calc(-${padding}px - ${avatarSize / 2}px)`,
   },
   avatar: {
-    minWidth: 200,
-    minHeight: 200,
-    border: '10px solid transparent',
-    background: theme.gradients.blackRadial,
+    minWidth: avatarSize,
+    minHeight: avatarSize,
     borderRadius: '50%',
     MozBorderRadius: '50%',
     WebkitBorderRadius: '50%',
+    boxShadow: '0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)',
+  },
+  containerProfile: {
+    paddingTop: padding / 2,
+    textAlign: 'center',
+  },
+
+  containerAbout: {
+    paddingTop: padding / 2,
+    textAlign: 'center',
   },
   containerBottom: {
     textAlign: 'center',
@@ -44,11 +51,15 @@ const Component = (props) => {
   const classes = useStyles();
 
   const texts = {
-    profile: 'Perfil',
-    profileDesc:
-      'Crio jogos e aplicativos, próprios ou de terceiros, para a Web e as plataformas mobile Android e IOS',
+    profile: 'Jonathan Reis',
+    profileDesc: 'Fullstack Developer',
+    // profileDesc:
+    // 'Crio jogos e aplicativos, próprios ou de terceiros, para a Web e as plataformas mobile Android e IOS',
     aboutMe: 'Sobre mim',
-    aboutMeDesc:
+    aboutMeDescA:
+      'Invento, escrevo, codifico e faço toda a parte de desenvolvimento de Aplicativos, jogos e websites para as diversas plataformas conhecidas: Android, iOS, Web e etc...',
+    aboutMeDescB: 'Crio estratégias de monetização dos aplicativos usando vendas ou anúncios in-app.',
+    aboutMeDescC:
       'Sou desenvolvedor Full-Stack, apaixonado por tecnologia, e principalmente por desenvolvimento, quero por em prática todo o meu conhecimento na área de desenvolvimento de aplicativos e games, de preferência Mobile (IOS e Android), mas não limitado a isso.',
     details: 'Detalhes',
     nameTitle: 'Nome:',
@@ -62,22 +73,49 @@ const Component = (props) => {
   };
 
   const profilePhoto =
-    'https://media-exp1.licdn.com/dms/image/C4E03AQGb0x1oRRhwSw/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=4OgQ0XmFJzNhgMooVzIFnr9FHO1b4e0mcn-C18qp4Yo';
+    'https://avatars2.githubusercontent.com/u/3427409?s=460&u=31771fecf4d95a1c16d06f1ff4d1d2a0af27262a&v=4';
 
   return (
-    <SubSection>
+    <SubSection maxWidth="sm">
+      {/* Photo Avatar */}
+      <Grid container className={classes.containerAvatar}>
+        <Avatar alt="Jonathan Reis" src={profilePhoto} className={classes.avatar} />
+      </Grid>
+
       <Grid container className={classes.containerProfile}>
         <Grid item xs={12} sm={12} md={12}>
-          <Typography variant="h2">
+          <Typography variant="h2" gutterBottom>
             <Bold>{texts.profile}</Bold>
           </Typography>
-          <br />
-          <Typography variant="body1">{texts.profileDesc}</Typography>
+          {/* <br /> */}
+          <Typography variant="body1">
+            <Bold>{texts.profileDesc}</Bold>
+          </Typography>
+        </Grid>
+      </Grid>
+
+      <Grid container className={classes.containerAbout}>
+        <Grid item xs={12} sm={12} md={12}>
+          <Typography variant="body1" gutterBottom>
+            {texts.aboutMeDescA}
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            {texts.aboutMeDescB}
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            {texts.aboutMeDescC}
+          </Typography>
+        </Grid>
+      </Grid>
+
+      <Grid container className={classes.containerAbout}>
+        <Grid item xs={12} sm={12} md={12}>
+          <Typography variant="body2">{texts.aboutMeDesc}</Typography>
         </Grid>
       </Grid>
 
       <Grid container>
-        <Grid item xs={12} sm={4} md={4} className={classes.align}>
+        <Grid item xs={12} sm={6} md={6} className={classes.align}>
           <Typography variant="h4">
             <Bold>{texts.aboutMe}</Bold>
           </Typography>
@@ -85,11 +123,11 @@ const Component = (props) => {
           <Typography variant="body1">{texts.aboutMeDesc}</Typography>
         </Grid>
 
-        <Grid item xs={12} sm={4} md={4} className={classes.containerAvatar}>
+        {/* <Grid item xs={12} sm={4} md={4} className={classes.containerAvatar}>
           <Avatar alt="Jonathan Reis" src={profilePhoto} className={classes.avatar} />
-        </Grid>
+        </Grid> */}
 
-        <Grid item xs={12} sm={4} md={4} className={classes.align}>
+        <Grid item xs={12} sm={6} md={6} className={classes.align}>
           <Typography variant="h4">
             <Bold>{texts.details}</Bold>
           </Typography>

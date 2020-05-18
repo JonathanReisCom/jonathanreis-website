@@ -1,25 +1,27 @@
 import React from 'react';
 // nodejs library that concatenates classes
-import classNames from 'classnames';
+// import classNames from 'classnames';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
+// import Typography from '@material-ui/core/Typography';
+// import Paper from '@material-ui/core/Paper';
+// Spring for animations
+import { useSpring, animated } from 'react-spring';
 // @material-ui/icons
-import Menu from '@material-ui/icons/Menu';
+// import Menu from '@material-ui/icons/Menu';
 // My Components
-import Bold from 'components/Bold';
+// import Bold from 'components/Bold';
 // Images
-import logo from 'assets/images/logo-jonathan-reis-com.png';
+// import logo from 'assets/images/logo-jonathan-reis-com.png';
 
 // Style
 import theme from 'components/Theme';
 const localStyle = {
   header: {
     background: theme.gradients.black,
-    height: '100vh',
+    height: 400,
     overflow: 'hidden',
     backgroundPosition: 'center top',
     backgroundSize: 'cover',
@@ -88,6 +90,7 @@ const Component = (props) => {
   const classes = useStyles();
   const [transform, setTransform] = React.useState('translate3d(0, 0px, 0)');
   const [image, setImage] = React.useState(null);
+  const fade = useSpring({ opacity: 1, from: { opacity: 0 }, config: { duration: 2000 } });
 
   const texts = {
     profileName: 'Jonathan Reis',
@@ -99,22 +102,19 @@ const Component = (props) => {
 
   React.useEffect(() => {
     const imageArray = [
-      require('assets/images/web-development-001.png'),
-      require('assets/images/web-development-002.png'),
-      require('assets/images/web-development-004.png'),
-      require('assets/images/web-development-005.png'),
-      require('assets/images/web-development-006.png'),
-      require('assets/images/web-development-007.png'),
+      require('assets/images/bg-header-001.jpg'),
+      // require('assets/images/web-development-001.png'),
+      // require('assets/images/web-development-002.png'),
+      // require('assets/images/web-development-004.png'),
+      // require('assets/images/web-development-005.png'),
+      // require('assets/images/web-development-006.png'),
+      // require('assets/images/web-development-007.png'),
     ];
     setImage(imageArray[Math.floor(Math.random() * imageArray.length)]);
 
-    // if (window.innerWidth >= 768) {
     window.addEventListener('scroll', resetTransform);
-    // }
     return function cleanup() {
-      // if (window.innerWidth >= 768) {
       window.removeEventListener('scroll', resetTransform);
-      // }
     };
   }, []);
 
@@ -124,33 +124,46 @@ const Component = (props) => {
   };
 
   return (
-    <div className={classes.header} style={{ transform: transform }}>
+    <animated.div
+      style={{
+        backgroundImage: 'url(' + image + ')',
+        transform: transform,
+        ...fade,
+      }}
+      className={classes.header}>
       <Container maxWidth="md" disableGutters className={classes.container}>
-        {/* Teste */}
         <Grid container>
-          <Grid item xs={12} sm={6} md={6} className={classes.containerLeft}>
+          {/* Title */}
+          {/* <Grid item xs={12} sm={6} md={6} className={classes.containerLeft}>
             <Typography variant={'h1'} className={classes.h1Variant}>
               <Bold>{texts.profileName}</Bold>
             </Typography>
             <Typography variant={'h3'} className={classes.h2Variant}>
               {texts.profileDesc}
             </Typography>
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} sm={6} md={6} className={classes.containerRight}>
-            <img src={image} alt={`${texts.profileName} Header Image`} className={classes.devImage} />
-          </Grid>
+          {/* Image */}
+          {/* <Grid item xs={12} sm={6} md={6} className={classes.containerRight}>
+            <animated.img
+              style={fade}
+              src={image}
+              alt={`${texts.profileName} Header Image`}
+              className={classes.devImage}
+            />
+          </Grid> */}
         </Grid>
 
-        <Grid container className={classes.containerBottom}>
+        {/* Bottom */}
+        {/* <Grid container className={classes.containerBottom}>
           <Grid item xs={12} sm={12} md={12}>
             <Typography variant={'h3'} className={classes.h2Variant}>
               {texts.profileDescBottom}
             </Typography>
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
-    </div>
+    </animated.div>
   );
 };
 

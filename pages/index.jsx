@@ -13,6 +13,7 @@ import Section from 'components/Containers/Section';
 import SubSection from 'components/Containers/SubSection';
 import Bold from 'components/Bold';
 import Profile from 'components/SubSections/Profile';
+import GithubChart from 'components/SubSections/GithubChart';
 // Images
 import logo from 'assets/img/bg4.jpg';
 
@@ -61,13 +62,12 @@ const Index = (props) => {
     <>
       <SEO />
       <GoogleAnalytics />
-
       <TopMenuBar />
-
       <Header />
 
       <Section raised>
         <Profile />
+        <GithubChart />
       </Section>
 
       {/* <SubSection color={'red'} overBottom> */}

@@ -60,8 +60,12 @@
     "react": "^16.13.1",
     "react-datetime": "2.16.3",
     "react-dom": "^16.13.1",
+    "react-dummy-image": "^1.0.0",
     "react-ga": "^2.7.0",
+    "react-lazyload": "^2.6.7",
+    "react-spring": "^8.0.27",
     "react-swipeable-views": "0.13.9",
+    "react-transition-group": "^4.4.1",
     "swr": "^0.2.0",
     "webpack": "4.43.0"
   }

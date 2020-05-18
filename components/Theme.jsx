@@ -45,13 +45,21 @@ const gradients = {
 const sizes = {
   typography: {
     lineHeight: '1.4',
+    // FONT SIZES
     h1: '2.5rem',
     h2: '2rem',
     h3: '1.75rem',
     h4: '1.5rem',
-    h5: '1.25 rem',
+    h5: '1.25rem',
     h6: '1rem',
     button: '0.65rem',
+    body1: '1rem',
+    body2: '0.875rem',
+  },
+  position: {
+    subSectionPadding: 50,
+    sectionOverSize: 70,
+    defaultGutter: 24,
   },
 };
 
@@ -90,6 +98,16 @@ const typography = {
     },
     button: {
       fontSize: sizes.typography.button,
+    },
+    body1: {
+      fontSize: sizes.typography.body1,
+      fontWeight: '300',
+      lineHeight: `calc(${sizes.typography.body1} * ${sizes.typography.lineHeight})`,
+    },
+    body2: {
+      fontSize: sizes.typography.body2,
+      fontWeight: '300',
+      lineHeight: `calc(${sizes.typography.body2} * ${sizes.typography.lineHeight})`,
     },
   },
 };
@@ -131,6 +149,7 @@ const theme = createMuiTheme({
   },
   ...typography,
   ...gradients,
+  sizes: { ...sizes.position },
   palette: {
     primary: {
       main: colors.primaryColor,

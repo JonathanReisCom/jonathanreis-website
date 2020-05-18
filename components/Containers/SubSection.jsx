@@ -6,9 +6,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 // Style
 import theme from 'components/Theme';
-const padding = 70;
+const padding = theme.sizes.subSectionPadding;
 const localStyle = {
-  section: {
+  subSection: {
     paddingTop: padding,
     paddingBottom: padding,
     position: 'relative',
@@ -33,6 +33,14 @@ const useStyles = makeStyles(localStyle);
 const Component = (props) => {
   const classes = useStyles();
 
+  const maxWidth = () => {
+    if (props.maxWidth) {
+      return props.maxWidth;
+    } else {
+      return 'md';
+    }
+  };
+
   let divColored = null;
   if (props.color) {
     divColored = (
@@ -45,16 +53,14 @@ const Component = (props) => {
     );
   }
 
-  // return null;
-
   return (
     <div
       className={classNames({
-        [classes.section]: true,
+        [classes.subSection]: true,
         [classes.overBottom]: props.overBottom,
       })}>
       {divColored}
-      <Container maxWidth="md" disableGutters className={classes.relative}>
+      <Container maxWidth={maxWidth()} disableGutters className={classes.relative}>
         {props.children}
       </Container>
     </div>

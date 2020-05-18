@@ -40,7 +40,8 @@ const localStyle = {
   },
   glass: {
     boxShadow: `1px 1px ${theme.palette.primary.main}`,
-    backgroundColor: 'rgba(0,0,0,0.7)',
+    // backgroundColor: 'rgba(0,0,0,0.7)',
+    backgroundColor: 'rgba(50,50,50,0.6)',
   },
   black: {
     boxShadow: `1px 1px ${theme.palette.primary.main}`,
@@ -111,17 +112,6 @@ const Component = (props) => {
     height: 400,
     color: 'black',
   };
-
-  // const headerColorChange = () => {
-  //   const windowsScrollTop = window.pageYOffset;
-  //   if (windowsScrollTop > changeColorOnScroll.height) {
-  //     document.body.getElementsByTagName('header')[0].classList.remove(classes.viewOff);
-  //     document.body.getElementsByTagName('header')[0].classList.add(classes.viewOn);
-  //   } else {
-  //     document.body.getElementsByTagName('header')[0].classList.add(classes.viewOff);
-  //     document.body.getElementsByTagName('header')[0].classList.remove(classes.viewOn);
-  //   }
-  // };
 
   const headerColorChange = () => {
     const windowsScrollTop = window.pageYOffset;
