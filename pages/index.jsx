@@ -67,7 +67,7 @@ const Index = (props) => {
 
       <Section raised>
         <Profile />
-        <GithubChart />
+        {/* <GithubChart /> */}
       </Section>
 
       {/* <SubSection color={'red'} overBottom> */}

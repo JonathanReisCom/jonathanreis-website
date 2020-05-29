@@ -35,7 +35,7 @@ const localStyle = {
 
   containerAbout: {
     paddingTop: padding / 2,
-    textAlign: 'center',
+    textAlign: 'left',
   },
   containerBottom: {
     textAlign: 'center',
@@ -53,15 +53,16 @@ const Component = (props) => {
   const texts = {
     profile: 'Jonathan Reis',
     profileDesc: 'Fullstack Developer',
-    // profileDesc:
-    // 'Crio jogos e aplicativos, próprios ou de terceiros, para a Web e as plataformas mobile Android e IOS',
-    aboutMe: 'Sobre mim',
+    aboutMe: '...',
     aboutMeDescA:
-      'Invento, escrevo, codifico e faço toda a parte de desenvolvimento de Aplicativos, jogos e websites para as diversas plataformas conhecidas: Android, iOS, Web e etc...',
-    aboutMeDescB: 'Crio estratégias de monetização dos aplicativos usando vendas ou anúncios in-app.',
-    aboutMeDescC:
-      'Sou desenvolvedor Full-Stack, apaixonado por tecnologia, e principalmente por desenvolvimento, quero por em prática todo o meu conhecimento na área de desenvolvimento de aplicativos e games, de preferência Mobile (IOS e Android), mas não limitado a isso.',
-    details: 'Detalhes',
+      'Sou desenvolvedor Full-Stack, apaixonado por tecnologia, e principalmente por desenvolvimento, tenho conhecimento na área de desenvolvimento de aplicativos e games, de preferência Mobile (IOS e Android)',
+
+    aboutMeDescB:
+      'Invento, escrevo, codifico, gerencio, faço a manutenção... enfim, executo todas as fases de desenvolvimento de aplicativos, games, websites, sistemas para as plataformas Android, iOS e web.',
+
+    aboutMeDescC: 'Crio estratégias de monetização para aplicativos usando vendas ou anúncios in-app.',
+
+    details: '...',
     nameTitle: 'Nome:',
     nameDesc: 'Jonathan Reis',
     ageTitle: 'Idade:',
@@ -69,7 +70,7 @@ const Component = (props) => {
     locationTitle: 'Localização:',
     locationDesc: 'Rio de Janeiro, Brasil',
     finalDesc:
-      'Possuo experiência de mais de 10 anos com desenvolvimento, alocado em empresas no modelo CLT e PJ, também faço trabalhos como freelancer, desenvolvendo para empresas como Yupi Studios e Red Bull, tenho facilidade com linguagens como JavaScript, C++, PHP, Java, Swift e outras.',
+      'Possuo experiência de mais de 10 anos com desenvolvimento, alocado em empresas no modelo CLT e PJ, também faço trabalhos como freelancer, desenvolvendo para empresas como Spot Educação, Hyper English, Yupi Studios e Red Bull, tenho facilidade com linguagens como JavaScript, C++, PHP, Java, Swift e outras.',
   };
 
   const profilePhoto =
@@ -105,29 +106,31 @@ const Component = (props) => {
           <Typography variant="body1" gutterBottom>
             {texts.aboutMeDescC}
           </Typography>
+
+          <Typography variant="body1">{texts.finalDesc}</Typography>
         </Grid>
       </Grid>
 
-      <Grid container className={classes.containerAbout}>
+      {/* <Grid container className={classes.containerAbout}>
         <Grid item xs={12} sm={12} md={12}>
           <Typography variant="body2">{texts.aboutMeDesc}</Typography>
         </Grid>
-      </Grid>
+      </Grid> */}
 
-      <Grid container>
-        <Grid item xs={12} sm={6} md={6} className={classes.align}>
+      {/* <Grid container> */}
+      {/* <Grid item xs={12} sm={6} md={6} className={classes.align}>
           <Typography variant="h4">
             <Bold>{texts.aboutMe}</Bold>
           </Typography>
           <br />
           <Typography variant="body1">{texts.aboutMeDesc}</Typography>
-        </Grid>
+        </Grid> */}
 
-        {/* <Grid item xs={12} sm={4} md={4} className={classes.containerAvatar}>
+      {/* <Grid item xs={12} sm={4} md={4} className={classes.containerAvatar}>
           <Avatar alt="Jonathan Reis" src={profilePhoto} className={classes.avatar} />
         </Grid> */}
 
-        <Grid item xs={12} sm={6} md={6} className={classes.align}>
+      {/* <Grid item xs={12} sm={6} md={6} className={classes.align}>
           <Typography variant="h4">
             <Bold>{texts.details}</Bold>
           </Typography>
@@ -147,14 +150,14 @@ const Component = (props) => {
             <Bold>{texts.locationTitle}</Bold>
           </Typography>
           <Typography variant="body1">{texts.locationDesc}</Typography>
-        </Grid>
-      </Grid>
+        </Grid> */}
+      {/* </Grid> */}
 
-      <Grid container className={classes.containerBottom}>
+      {/* <Grid container className={classes.containerBottom}>
         <Grid item xs={12} sm={12} md={12}>
           <Typography variant="body1">{texts.finalDesc}</Typography>
         </Grid>
-      </Grid>
+      </Grid> */}
     </SubSection>
   );
 };
