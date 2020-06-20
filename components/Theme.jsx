@@ -137,7 +137,7 @@ const muiTooltip = {
 const muiGrid = {
   MuiGrid: {
     item: {
-      padding: '0.5rem',
+      padding: '1rem',
     },
   },
 };
