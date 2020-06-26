@@ -72,7 +72,7 @@ const Component = (props) => {
     github: {
       href: 'https://github.com/JonathanReisCom',
       target: '_blank',
-      tooltip: 'Me siga no LinkedIn',
+      tooltip: 'Meu Github',
     },
     linkedin: {
       href: 'https://www.linkedin.com/in/jonathan-reis-com/',
@@ -83,7 +83,7 @@ const Component = (props) => {
     instagram: {
       href: 'https://www.instagram.com/jonathanreis/',
       target: '_blank',
-      tooltip: 'Me siga no LinkedIn',
+      tooltip: 'Me siga no Instagram',
     },
   };
 
