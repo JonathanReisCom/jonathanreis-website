@@ -13,8 +13,20 @@ import Section from 'components/Containers/Section';
 import SubSection from 'components/Containers/SubSection';
 import Bold from 'components/Bold';
 import Profile from 'components/SubSections/Profile';
-import GithubChart from '../components/SubSections/GithubChart';
-import CustomLink from 'components/CustomLink';
+import GithubChart from 'components/SubSections/GithubChart';
+
+export function getStaticPaths() {
+  const paths = [{ params: { language: 'pt-br' } }, { params: { language: 'en-us' } }];
+  console.log('--- getStaticPaths ---', paths);
+  return {
+    fallback: false,
+    paths: paths,
+  };
+}
+export function getStaticProps({ params }) {
+  console.log('--- getStaticProps ---', params);
+  return { props: params };
+}
 
 // Style
 import theme from 'components/Theme';
@@ -65,16 +77,6 @@ const Index = (props) => {
       <Header />
 
       <Section raised>
-        <h1>Index Principal</h1>
-
-        <CustomLink href="/en-us/heroes-villains/batman">
-          <a>/en-us/heroes-villains/batman</a>
-        </CustomLink>
-        <br />
-        <CustomLink href="/pt-br/heroes-villains/batman">
-          <a>/pt-br/heroes-villains/batman</a>
-        </CustomLink>
-
         <Profile />
         <GithubChart />
       </Section>

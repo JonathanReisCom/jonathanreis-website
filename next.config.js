@@ -4,17 +4,27 @@ const withSass = require('@zeit/next-sass');
 const webpack = require('webpack');
 const path = require('path');
 
-// let API_URL = 'http://localhost:8080/jonathanreis-website/api';
-// if (process.env.NODE_ENV === 'production') {
-//   API_URL = 'http://api.jonathanreis.com';
-// }
+const assetPrefixForNamespace = (namespace) => {
+  switch (namespace) {
+    case 'prod':
+      return { url: 'https://jonathanreis.com', need_extension: false };
+    case 'export_linux':
+      // /var/www/html/jonathanreis.com
+      return { url: 'http://localhost/jonathanreis.com', need_extension: true };
+    default:
+      return { url: '', need_extension: false };
+  }
+};
+const namespace = process.env.NAMESPACE;
 
 module.exports = withPlugins([[withSass], [withImages]], {
-  // env: {
-  //   API_URL: API_URL,
-  //   customKey: 'my-value',
-  // },
-  webpack(config, options) {
+  env: {
+    APP_URL: assetPrefixForNamespace(namespace).url,
+    NEED_EXTENSION: assetPrefixForNamespace(namespace).need_extension,
+  },
+  assetPrefix: assetPrefixForNamespace(namespace).url,
+  webpack: (config) => {
+    config.output.publicPath = `${assetPrefixForNamespace(namespace).url}${config.output.publicPath}`;
     config.resolve.modules.push(path.resolve('./'));
     return config;
   },

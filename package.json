@@ -2,6 +2,8 @@
   "name": "jonathanreis-website",
   "version": "1.0.0",
   "description": "NextJS Version of 'www.jonathanreis.com' by Jonathan Reis (https://github.com/JonathanReisCom)",
+  "author": "Jonathan Reis",
+  "licensez": "MIT",
   "main": "index.jsx",
   "scripts": {
     "prod": "npm run a && npm run b && npm run c && npm run d && npm run e",
@@ -14,9 +16,12 @@
     "dev": "NODE_ENV=development next",
     "start": "NODE_ENV=development next start",
     "----": "---",
-    "local": "yarn l_a && yarn l_b",
-    "l_a": "yarn install",
-    "l_b": "NODE_ENV=localhost next build ",
+    "export_linux": "yarn l_a && yarn l_b && yarn l_c && yarn l_d && yarn l_e",
+    "l_a": "echo 'Cleaning Babel...' && rm -rf node_modules/.cache/babel-loader || echo 'Nothing to remove.' ",
+    "l_b": "echo 'Installing dependencies...' && yarn install",
+    "l_c": "echo 'Remove old build...' && rm -r /var/www/html/jonathanreis.com/* || echo 'Nothing to remove.' ",
+    "l_d": "echo 'Building...' && NAMESPACE=export_linux next build",
+    "l_e": "echo 'Exporting...' && NAMESPACE=export_linux next export -o /var/www/html/jonathanreis.com/",
     "-----": "---"
   },
   "repository": {
@@ -35,8 +40,6 @@
     "material-kit-react",
     "next-material-kit"
   ],
-  "author": "Jonathan Reis",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/JonathanReisCom/jonathanreis-website/issues"
   },
