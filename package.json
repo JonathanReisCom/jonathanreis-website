@@ -23,11 +23,11 @@
     "l_d": "echo 'Building...' && NAMESPACE=export_linux next build",
     "l_e": "echo 'Exporting...' && NAMESPACE=export_linux next export -o /var/www/html/jonathanreis.com/",
     "-----": "echo '...'",
-    "predeploy": "yarn l_a && yarn l_b && yarn pd_c && yarn pd_d && yarn pd_e",
+    "deploy_ghpages": "yarn l_a && yarn l_b && yarn pd_c && yarn pd_d && yarn pd_e && yarn pd_f",
     "pd_c": "echo 'Remove old build...' && rm -r out/* || echo 'Nothing to remove.' ",
     "pd_d": "echo 'Building...' && NAMESPACE=ghpages next build",
     "pd_e": "echo 'Exporting...' && NAMESPACE=ghpages next export -o out/",
-    "deploy_ghpages": "gh-pages -d out/"
+    "pd_f": "echo 'Deploying...' && gh-pages -d out/"
   },
   "homepage": "https://github.com/JonathanReisCom/jonathanreis-website",
   "repository": {

@@ -8,6 +8,7 @@ yarn-error.log
 
 # NextJs
 .next/
+out/
 
 # BUCK
 buck-out/
