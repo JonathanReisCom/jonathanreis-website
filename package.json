@@ -23,11 +23,12 @@
     "l_d": "echo 'Building...' && NAMESPACE=export_linux next build",
     "l_e": "echo 'Exporting...' && NAMESPACE=export_linux next export -o /var/www/html/jonathanreis.com/",
     "-----": "echo '...'",
-    "deploy_ghpages": "yarn l_a && yarn l_b && yarn pd_c && yarn pd_d && yarn pd_e && yarn pd_f",
+    "deploy_ghpages": "yarn l_a && yarn l_b && yarn pd_c && yarn pd_d && yarn pd_e && yarn pd_f && yarn pd_g",
     "pd_c": "echo 'Remove old build...' && rm -r out/* || echo 'Nothing to remove.' ",
     "pd_d": "echo 'Building...' && NAMESPACE=ghpages next build",
     "pd_e": "echo 'Exporting...' && NAMESPACE=ghpages next export -o out/",
-    "pd_f": "echo 'Deploying...' && gh-pages -d out/"
+    "pd_f": "echo 'Copy .nojekyll...' && cp .nojekyll out/",
+    "pd_g": "echo 'Deploying...' && gh-pages -t true -d out/"
   },
   "homepage": "https://github.com/JonathanReisCom/jonathanreis-website",
   "repository": {
