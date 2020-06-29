@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -59,24 +60,25 @@ const Index = (props) => {
 
   return (
     <>
-      <SEO />
-      <GoogleAnalytics />
-      <TopMenuBar />
+      {/* <SEO /> */}
+      {/* <GoogleAnalytics /> */}
+      {/* <TopMenuBar /> */}
       <Header />
 
       <Section raised>
         <h1>Index Principal</h1>
-
-        <CustomLink href="/en-us/heroes-villains/batman">
-          <a>/en-us/heroes-villains/batman</a>
+        <br />
+        <br />
+        <CustomLink href="/[language]/heroes-villains" as="/pt-br/heroes-villains">
+          <a>Go to page</a>
         </CustomLink>
         <br />
-        <CustomLink href="/pt-br/heroes-villains/batman">
-          <a>/pt-br/heroes-villains/batman</a>
-        </CustomLink>
+        <br />
+      </Section>
 
-        <Profile />
-        <GithubChart />
+      <Section raised>
+        {/* <Profile /> */}
+        {/* <GithubChart /> */}
       </Section>
 
       {/* <SubSection color={'red'} overBottom> */}

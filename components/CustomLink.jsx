@@ -1,19 +1,13 @@
+import React from 'react';
 import Link from 'next/link';
-import { format } from 'url';
 
-const CustomLink = ({ children, ...props }) => {
-  let link = `${process.env.APP_URL}${format(props.href)}`;
-
-  if (process.env.NEED_EXTENSION) {
-    link = `${process.env.APP_URL}${format(props.href)}.html`;
+const CustomLink = ({ children, href, as }) => {
+  if (process.env.NEED_DIRECT_LINK) {
+    return React.cloneElement(children, { href: `${process.env.APP_URL}${as}` });
   }
 
-  // if (props.href === '/') {
-  //   link = `${process.env.APP_URL}${format(props.href)}`;
-  // }
-
   return (
-    <Link {...props} as={link}>
+    <Link href={href} as={as}>
       {children}
     </Link>
   );

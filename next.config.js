@@ -6,25 +6,45 @@ const path = require('path');
 
 const assetPrefixForNamespace = (namespace) => {
   switch (namespace) {
-    case 'prod':
-      return { url: 'https://jonathanreis.com', need_extension: false };
+    case 'dev':
+      return {
+        url: '',
+        exportTrailingSlash: false,
+      };
     case 'export_linux':
-      // /var/www/html/jonathanreis.com
-      return { url: 'http://localhost/jonathanreis.com', need_extension: true };
-    default:
-      return { url: '', need_extension: false };
+      return {
+        url: '/jonathanreis.com', // My apache folder in laptop with linux
+        exportTrailingSlash: true,
+      };
+    case 'prod':
+      return {
+        url: 'https://jonathanreis.com',
+        exportTrailingSlash: false,
+      };
+    case 'ghpages':
+      return {
+        url: '/jonathanreis-website', // My GitHub Pages folder
+        exportTrailingSlash: true,
+      };
   }
 };
-const namespace = process.env.NAMESPACE;
+
+const config = assetPrefixForNamespace(process.env.NAMESPACE);
 
 module.exports = withPlugins([[withSass], [withImages]], {
   env: {
-    APP_URL: assetPrefixForNamespace(namespace).url,
-    NEED_EXTENSION: assetPrefixForNamespace(namespace).need_extension,
+    APP_URL: config.url,
+    NEED_DIRECT_LINK: config.exportTrailingSlash,
   },
-  assetPrefix: assetPrefixForNamespace(namespace).url,
+
+  // Folders with index.html on export
+  exportTrailingSlash: config.exportTrailingSlash,
+
+  // Set prefix for absolute links
+  assetPrefix: config.url,
+
   webpack: (config) => {
-    config.output.publicPath = `${assetPrefixForNamespace(namespace).url}${config.output.publicPath}`;
+    config.output.publicPath = `${config.url}${config.output.publicPath}`;
     config.resolve.modules.push(path.resolve('./'));
     return config;
   },

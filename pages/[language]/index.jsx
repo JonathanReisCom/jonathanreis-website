@@ -13,20 +13,6 @@ import Header from 'components/Containers/Header';
 import Section from 'components/Containers/Section';
 import SubSection from 'components/Containers/SubSection';
 
-export function getStaticPaths() {
-  // Funcional
-  // const paths = [{ params: { language: 'pt-br' } }, { params: { language: 'en-us' } }];
-
-  const paths = [{ params: { language: 'pt-br' } }, { params: { language: 'en-us' } }];
-  return {
-    fallback: false,
-    paths: paths,
-  };
-}
-export function getStaticProps({ params }) {
-  return { props: params };
-}
-
 // Style
 import theme from 'components/Theme';
 const localStyle = {
@@ -66,5 +52,19 @@ const Index = (props) => {
     </>
   );
 };
+
+export function getStaticPaths() {
+  // Funcional
+  // const paths = [{ params: { language: 'pt-br' } }, { params: { language: 'en-us' } }];
+
+  const paths = [{ params: { language: 'pt-br' } }, { params: { language: 'en-us' } }];
+  return {
+    fallback: false,
+    paths: paths,
+  };
+}
+export function getStaticProps({ params }) {
+  return { props: params };
+}
 
 export default Index;

@@ -126,7 +126,7 @@ const Component = (props) => {
   return (
     <animated.div
       style={{
-        backgroundImage: 'url(' + image + ')',
+        backgroundImage: image ? 'url(' + image + ')' : null,
         transform: transform,
         ...fade,
       }}
