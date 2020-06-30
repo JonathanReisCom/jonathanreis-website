@@ -16,16 +16,25 @@ const localStyle = {
   relative: {
     position: 'relative',
   },
+  overBottom: {
+    height: `calc(100% - ${padding * 2 - padding / 2}px)`,
+  },
+  // COLORS
   colored: {
     height: '100%',
     width: '100%',
     position: 'absolute',
     top: 0,
-    background: 'radial-gradient(ellipse at center, #585858 0, #232323 100%)',
-    // background: '-webkit-linear-gradient(#fde04c, #ffc900)'
+    borderRadius: '6px',
   },
-  overBottom: {
-    height: `calc(100% - ${padding * 2 - padding / 2}px)`,
+  gradient_gray: {
+    background: 'radial-gradient(ellipse at center, #585858 0, #232323 100%)',
+  },
+  gradient_orange: {
+    background: '-webkit-linear-gradient(#fde04c, #ffc900)',
+  },
+  light_gray: {
+    backgroundColor: '#f5f5f5',
   },
 };
 const useStyles = makeStyles(localStyle);
@@ -47,6 +56,7 @@ const Component = (props) => {
       <div
         className={classNames({
           [classes.colored]: true,
+          [classes[props.color]]: true,
           [classes.overBottom]: props.overBottom,
         })}
       />

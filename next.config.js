@@ -35,6 +35,7 @@ module.exports = withPlugins([[withSass], [withImages]], {
   env: {
     APP_URL: config.url,
     NEED_DIRECT_LINK: config.exportTrailingSlash,
+    PROJECT_ROOT: __dirname,
   },
 
   // Folders with index.html on export
