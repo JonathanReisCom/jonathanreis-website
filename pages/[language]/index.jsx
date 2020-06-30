@@ -12,9 +12,6 @@ import TopMenuBar from 'components/TopMenuBar/TopMenuBar';
 import Header from 'components/Containers/Header';
 import Section from 'components/Containers/Section';
 import SubSection from 'components/Containers/SubSection';
-// Read Files
-import fs from 'fs';
-import path from 'path';
 
 // Style
 import theme from 'components/Theme';
@@ -67,15 +64,9 @@ export const getStaticPaths = async () => {
 
 // It is relative to objects
 export const getStaticProps = async ({ params }) => {
-  const data = await fs.readFileSync(
-    path.join(process.env.PROJECT_ROOT, '/pages/[language]/heroes-villains/Heroes_and_Villains.json')
-  );
-  const json = JSON.parse(data);
   const props = {
     params: params,
-    items: json,
   };
-
   return { props: props };
 };
 

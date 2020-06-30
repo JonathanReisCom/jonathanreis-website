@@ -58,18 +58,19 @@ const Index = (props) => {
 // It is related to the url and the number of pages that will be created
 export const getStaticPaths = async () => {
   const data = await getAllHeroesIndex();
-  const paths = data.slice(0, 10).flatMap((obj) => {
+
+  const paths = data.slice(0, 10).flatMap((item) => {
     return [
       {
         params: {
           language: 'pt-br',
-          page: [`${obj.id}`, obj.name.toLowerCase().replace(/ /g, '-')],
+          page: [`${item.id}`, item.name.toLowerCase().replace(/ /g, '-')],
         },
       },
       {
         params: {
           language: 'en-us',
-          page: [`${obj.id}`, obj.name.toLowerCase().replace(/ /g, '-')],
+          page: [`${item.id}`, item.name.toLowerCase().replace(/ /g, '-')],
         },
       },
     ];
@@ -85,7 +86,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const id = params.page[0];
   const data = await getHeroById(id);
-  // console.log('---getStaticProps data:', data);
+
   const props = {
     params: params,
     items: data,
