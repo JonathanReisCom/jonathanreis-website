@@ -2,7 +2,6 @@ import React from 'react';
 import { useRouter } from 'next/router';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Avatar from '@material-ui/core/Avatar';
@@ -14,27 +13,17 @@ import TopMenuBar from 'components/TopMenuBar/TopMenuBar';
 import Header from 'components/Containers/Header';
 import Section from 'components/Containers/Section';
 import SubSection from 'components/Containers/SubSection';
-import Bold from 'components/Bold';
+import Text from 'components/Text';
 import CustomLink from 'components/CustomLink';
-// Read Files
-import fs from 'fs';
-import path from 'path';
+// API Heroes and Villains
+import { getAllHeroesIndex } from '../../../lib/heroes-and-villains/api';
 
 // Style
 import theme from 'components/Theme';
 const localStyle = {
-  typo: {
-    display: 'flex',
-    flexDirection: 'column',
-    paddingLeft: '25%',
-    marginBottom: '40px',
-    position: 'relative',
-    width: '100%',
+  marginTop: {
+    marginTop: '40px',
   },
-  paper: {
-    padding: 16,
-  },
-
   paper: {
     height: 150,
     width: 200,
@@ -42,6 +31,10 @@ const localStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
+      height: 150,
+      width: 150,
+    },
   },
   avatar: {
     minWidth: 100,
@@ -71,16 +64,16 @@ const Index = (props) => {
       <Section raised>
         <SubSection maxWidth="md" color={'light_gray'}>
           <Grid container justify="center">
-            <Typography variant="h1">
-              <Bold>My list of heroes and villains:</Bold>
-            </Typography>
+            <Text variant="h1" bold center>
+              My list of heroes and villains:
+            </Text>
           </Grid>
 
-          <Grid container justify="center" spacing={3}>
-            {props.items.slice(0, 10).map((obj, i) => {
+          <Grid container justify="center" spacing={3} className={classes.marginTop}>
+            {props.items.slice(0, 2).map((obj, i) => {
               const name = obj.name.toLowerCase().replace(/ /g, '-');
-              const href = `/[language]/heroes-villains/${name}`;
-              const as = `/pt-br/heroes-villains/${name}`;
+              const href = `/[language]/heroes-villains/${obj.id}/${name}`;
+              const as = `/pt-br/heroes-villains/${obj.id}/${name}`;
               return (
                 <Grid key={i} item>
                   <CustomLink href={href} as={as}>
@@ -89,10 +82,14 @@ const Index = (props) => {
                       className={classes.image}
                       focusVisibleClassName={classes.focusVisible}>
                       <Paper className={classes.paper}>
-                        <Avatar alt={obj.name} src={obj.name} className={classes.avatar} />
-                        <Typography variant="body1">
-                          <Bold>{obj.name}</Bold>
-                        </Typography>
+                        <Avatar
+                          alt={obj.name}
+                          // src={obj.name}
+                          className={classes.avatar}
+                        />
+                        <Text variant="body1" bold center>
+                          {obj.name}
+                        </Text>
                       </Paper>
                     </ButtonBase>
                   </CustomLink>
@@ -117,15 +114,11 @@ export const getStaticPaths = async () => {
 
 // It is related to objects that will be sent via props
 export const getStaticProps = async ({ params }) => {
-  const data = await fs.readFileSync(
-    path.join(process.env.PROJECT_ROOT, '/pages/[language]/heroes-villains/Heroes_and_Villains.json')
-  );
-  const json = JSON.parse(data);
+  const data = await getAllHeroesIndex();
   const props = {
     params: params,
-    items: json,
+    items: data,
   };
-
   return { props: props };
 };
 

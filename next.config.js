@@ -36,6 +36,8 @@ module.exports = withPlugins([[withSass], [withImages]], {
     APP_URL: config.url,
     NEED_DIRECT_LINK: config.exportTrailingSlash,
     PROJECT_ROOT: __dirname,
+    HEROES_AND_VILLAINS_API_URL: 'https://superheroapi.com/api/1148509085520339',
+    USE_CACHE: 'true',
   },
 
   // Folders with index.html on export
