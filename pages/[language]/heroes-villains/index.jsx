@@ -70,7 +70,7 @@ const Index = (props) => {
           </Grid>
 
           <Grid container justify="center" spacing={3} className={classes.marginTop}>
-            {props.items.slice(0, 2).map((obj, i) => {
+            {props.items.slice(0, 10).map((obj, i) => {
               const name = obj.name.toLowerCase().replace(/ /g, '-');
               const href = `/[language]/heroes-villains/${obj.id}/${name}`;
               const as = `/pt-br/heroes-villains/${obj.id}/${name}`;

@@ -13,6 +13,12 @@ const localStyle = {
     paddingBottom: padding,
     position: 'relative',
   },
+  noPaddingforMobile: {
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: 0,
+      paddingBottom: 0,
+    },
+  },
   relative: {
     position: 'relative',
   },
@@ -68,6 +74,7 @@ const Component = (props) => {
       className={classNames({
         [classes.subSection]: true,
         [classes.overBottom]: props.overBottom,
+        [classes.noPaddingforMobile]: props.noPaddingforMobile,
       })}>
       {divColored}
       <Container maxWidth={maxWidth()} disableGutters className={classes.relative}>

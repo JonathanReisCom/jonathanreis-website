@@ -132,36 +132,7 @@ const Component = (props) => {
       }}
       className={classes.header}>
       <Container maxWidth="md" disableGutters className={classes.container}>
-        <Grid container>
-          {/* Title */}
-          {/* <Grid item xs={12} sm={6} md={6} className={classes.containerLeft}>
-            <Typography variant={'h1'} className={classes.h1Variant}>
-              <Bold>{texts.profileName}</Bold>
-            </Typography>
-            <Typography variant={'h3'} className={classes.h2Variant}>
-              {texts.profileDesc}
-            </Typography>
-          </Grid> */}
-
-          {/* Image */}
-          {/* <Grid item xs={12} sm={6} md={6} className={classes.containerRight}>
-            <animated.img
-              style={fade}
-              src={image}
-              alt={`${texts.profileName} Header Image`}
-              className={classes.devImage}
-            />
-          </Grid> */}
-        </Grid>
-
-        {/* Bottom */}
-        {/* <Grid container className={classes.containerBottom}>
-          <Grid item xs={12} sm={12} md={12}>
-            <Typography variant={'h3'} className={classes.h2Variant}>
-              {texts.profileDescBottom}
-            </Typography>
-          </Grid>
-        </Grid> */}
+        <Grid container></Grid>
       </Container>
     </animated.div>
   );
