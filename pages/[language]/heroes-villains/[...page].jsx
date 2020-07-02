@@ -30,6 +30,8 @@ import { getAllHeroesIndex, getHeroById } from '../../../lib/heroes-and-villains
 // Lodash
 import get from 'lodash/get';
 import capitalize from 'lodash/capitalize';
+// Choosem Image for Header
+import headerImage from '../../../public/img/bg-marvel-vs-dc-heroes.jpg';
 
 // Style
 import theme from 'components/Theme';
@@ -117,8 +119,8 @@ const Index = (props) => {
         </StyledTableCell>
 
         <StyledTableCell align="left">
-          {newValue.map((v) => (
-            <Text gutterBottom variant="body1" component="p">
+          {newValue.map((v, i) => (
+            <Text key={i} gutterBottom variant="body1" component="p">
               {v}
             </Text>
 
@@ -153,7 +155,7 @@ const Index = (props) => {
       <SEO />
       <GoogleAnalytics />
       <TopMenuBar />
-      <Header />
+      <Header images={[headerImage]} />
 
       <Section raised>
         <SubSection maxWidth="sm" color={'light_gray'} noPaddingforMobile>
@@ -192,14 +194,14 @@ const Index = (props) => {
 export const getStaticPaths = async () => {
   const data = await getAllHeroesIndex();
 
-  const paths = data.slice(0, 10).flatMap((item) => {
+  const paths = data.flatMap((item) => {
     return [
-      {
-        params: {
-          language: 'pt-br',
-          page: [`${item.id}`, item.name.toLowerCase().replace(/ /g, '-')],
-        },
-      },
+      // {
+      //   params: {
+      //     language: 'pt-br',
+      //     page: [`${item.id}`, item.name.toLowerCase().replace(/ /g, '-')],
+      //   },
+      // },
       {
         params: {
           language: 'en-us',

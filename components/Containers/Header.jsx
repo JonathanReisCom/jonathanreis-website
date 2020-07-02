@@ -86,7 +86,7 @@ const localStyle = {
 };
 const useStyles = makeStyles(localStyle);
 
-const Component = (props) => {
+const Component = ({ images }) => {
   const classes = useStyles();
   const [transform, setTransform] = React.useState('translate3d(0, 0px, 0)');
   const [image, setImage] = React.useState(null);
@@ -101,15 +101,16 @@ const Component = (props) => {
   };
 
   React.useEffect(() => {
-    const imageArray = [
-      require('assets/images/bg-header-001.jpg'),
-      // require('assets/images/web-development-001.png'),
-      // require('assets/images/web-development-002.png'),
-      // require('assets/images/web-development-004.png'),
-      // require('assets/images/web-development-005.png'),
-      // require('assets/images/web-development-006.png'),
-      // require('assets/images/web-development-007.png'),
-    ];
+    let imageArray = [];
+    if (images) {
+      imageArray = images;
+    } else {
+      imageArray = [
+        require('assets/images/bg-header-001.jpg'),
+        // require('assets/images/web-development-001.png'),
+      ];
+    }
+
     setImage(imageArray[Math.floor(Math.random() * imageArray.length)]);
 
     window.addEventListener('scroll', resetTransform);
