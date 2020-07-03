@@ -45,11 +45,12 @@ const localStyle = {
     width: '100%',
   },
   card: {
-    marginTop: '-200px',
+    marginTop: '-230px',
     padding: 10,
   },
   media: {
     borderRadius: 6,
+    width: '100%',
   },
   paper: {
     padding: theme.spacing(1),
@@ -124,8 +125,6 @@ const Index = (props) => {
             <Text key={i} gutterBottom variant="body1" component="p">
               {v}
             </Text>
-
-            // <span>{v}</span>
           ))}
         </StyledTableCell>
       </StyledTableRow>
@@ -162,27 +161,30 @@ const Index = (props) => {
         <SubSection maxWidth="sm" color={'light_gray'} noPaddingforMobile>
           <Grid container justify="center" direction="column">
             <Card className={classes.card}>
+              {/* Navigation */}
+
+              {/* Image */}
               <CardMedia
                 className={classes.media}
                 component="img"
                 alt={hero.name}
-                height="600"
                 image={hero.image.url}
                 title={hero.name}
               />
+
+              {/* Data */}
               <CardContent>
                 <Text gutterBottom variant="h2" bold>
                   {hero.name}
                 </Text>
-                {/* <Text gutterBottom variant="button" component="h4" bold>
-                  {hero.biography['alignment']}
-                </Text> */}
 
                 {makeTable('biography', hero.biography)}
                 {makeTable('appearance', hero.appearance)}
                 {makeTable('work', hero.work)}
                 {makeTable('connections', hero.connections)}
               </CardContent>
+
+              {/* Other Related */}
             </Card>
           </Grid>
         </SubSection>

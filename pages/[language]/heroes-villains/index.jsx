@@ -68,20 +68,42 @@ const useStyles = makeStyles(localStyle);
 
 const Index = (props) => {
   const classes = useStyles();
-  // const router = useRouter();
+  const router = useRouter();
   const language = get(props, 'params.language', 'pt-br');
+  const pageFromLink = Number(get(router, 'query.page'));
   const isBreakpointXS = useMediaQuery(theme.breakpoints.down('xs'));
-
   const items = get(props, 'items', []);
   const itemsPerPage = 12;
   const totalPages = Math.round(items.length / itemsPerPage);
+
   const [page, setPage] = React.useState(1);
   const [slice, setSlice] = React.useState([0, itemsPerPage]);
+
+  React.useEffect(() => {
+    if (pageFromLink) {
+      handleChange(null, pageFromLink);
+    }
+  }, [pageFromLink]);
+
   const handleChange = (event, value) => {
     const x = itemsPerPage * (value - 1);
     const y = x + itemsPerPage;
     setPage(value);
     setSlice([x, y]);
+
+    if (value != pageFromLink) {
+      router.push(
+        {
+          pathname: `/[language]/heroes-villains`,
+          query: { page: value },
+        },
+        {
+          pathname: `/${language}/heroes-villains`,
+          query: { page: value },
+        },
+        { shallow: true }
+      );
+    }
   };
 
   return (
@@ -158,7 +180,7 @@ const Index = (props) => {
 
 // It is related to the url and the number of pages that will be created
 export const getStaticPaths = async () => {
-  const paths = [{ params: { language: 'pt-br' } }, { params: { language: 'en-us' } }];
+  const paths = [{ params: { language: 'en-us' } }];
   return {
     fallback: false,
     paths: paths,
