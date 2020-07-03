@@ -18,15 +18,16 @@ const localStyle = {
 };
 const useStyles = makeStyles(localStyle);
 
-const Component = ({ children, bold, center, ...rest }) => {
+const Component = ({ children, bold, center, className, ...props }) => {
   const classes = useStyles();
   return (
     <Typography
-      {...rest}
       className={classNames({
         [classes.center]: center,
         [classes.bold]: bold,
-      })}>
+        [className]: className,
+      })}
+      {...props}>
       {children}
     </Typography>
   );

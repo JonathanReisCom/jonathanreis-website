@@ -2759,22 +2759,42 @@
     "alignment": "bad",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/856.jpg"
   },
-  { "id": 461, "name": "Mister Zsasz" },
+  {
+    "id": 461,
+    "name": "Mister Zsasz",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1486.jpg"
+  },
   {
     "id": 462,
     "name": "Mockingbird",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1328.jpg"
   },
-  { "id": 463, "name": "MODOK" },
+  {
+    "id": 463,
+    "name": "MODOK",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10438.jpg"
+  },
   {
     "id": 464,
     "name": "Mogo",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1432.jpg"
   },
-  { "id": 465, "name": "Mohinder Suresh" },
-  { "id": 466, "name": "Moloch" },
+  {
+    "id": 465,
+    "name": "Mohinder Suresh",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1313.jpg"
+  },
+  {
+    "id": 466,
+    "name": "Moloch",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1061.jpg"
+  },
   {
     "id": 467,
     "name": "Molten Man",
@@ -2793,7 +2813,12 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/942.jpg"
   },
-  { "id": 470, "name": "Moon Knight" },
+  {
+    "id": 470,
+    "name": "Moon Knight",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/415.jpg"
+  },
   {
     "id": 471,
     "name": "Moonstone",
@@ -2866,8 +2891,18 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/105.jpg"
   },
-  { "id": 483, "name": "Namora" },
-  { "id": 484, "name": "Namorita" },
+  {
+    "id": 483,
+    "name": "Namora",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1364.jpg"
+  },
+  {
+    "id": 484,
+    "name": "Namorita",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/106.jpg"
+  },
   {
     "id": 485,
     "name": "Naruto Uzumaki",
@@ -2910,7 +2945,12 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/851.jpg"
   },
-  { "id": 492, "name": "Niki Sanders" },
+  {
+    "id": 492,
+    "name": "Niki Sanders",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/952.jpg"
+  },
   {
     "id": 493,
     "name": "Nina Theroux",
@@ -2953,7 +2993,12 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1298.jpg"
   },
-  { "id": 500, "name": "Omega Red" },
+  {
+    "id": 500,
+    "name": "Omega Red",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/208.jpg"
+  },
   {
     "id": 501,
     "name": "Omniscient",
@@ -2966,7 +3011,12 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/10522.jpg"
   },
-  { "id": 503, "name": "One-Above-All" },
+  {
+    "id": 503,
+    "name": "One-Above-All",
+    "alignment": "neutral",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10374.jpg"
+  },
   {
     "id": 504,
     "name": "Onslaught",
@@ -3003,21 +3053,36 @@
     "alignment": "bad",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/10806.jpg"
   },
-  { "id": 510, "name": "Paul Blart" },
+  {
+    "id": 510,
+    "name": "Paul Blart",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10479.jpg"
+  },
   {
     "id": 511,
     "name": "Penance",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/929.jpg"
   },
-  { "id": 512, "name": "Penance I" },
+  {
+    "id": 512,
+    "name": "Penance I",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/930.jpg"
+  },
   {
     "id": 513,
     "name": "Penance II",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/900.jpg"
   },
-  { "id": 514, "name": "Penguin" },
+  {
+    "id": 514,
+    "name": "Penguin",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/753.jpg"
+  },
   {
     "id": 515,
     "name": "Phantom",
@@ -3036,9 +3101,24 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/828.jpg"
   },
-  { "id": 518, "name": "Plantman" },
-  { "id": 519, "name": "Plastic Lad" },
-  { "id": 520, "name": "Plastic Man" },
+  {
+    "id": 518,
+    "name": "Plantman",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10487.jpg"
+  },
+  {
+    "id": 519,
+    "name": "Plastic Lad",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1299.jpg"
+  },
+  {
+    "id": 520,
+    "name": "Plastic Man",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/756.jpg"
+  },
   {
     "id": 521,
     "name": "Plastique",
@@ -3051,9 +3131,24 @@
     "alignment": "bad",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/757.jpg"
   },
-  { "id": 523, "name": "Polaris" },
-  { "id": 524, "name": "Power Girl" },
-  { "id": 525, "name": "Power Man" },
+  {
+    "id": 523,
+    "name": "Polaris",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1046.jpg"
+  },
+  {
+    "id": 524,
+    "name": "Power Girl",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/758.jpg"
+  },
+  {
+    "id": 525,
+    "name": "Power Man",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1016.jpg"
+  },
   {
     "id": 526,
     "name": "Predator",
@@ -3066,10 +3161,30 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/113.jpg"
   },
-  { "id": 528, "name": "Professor Zoom" },
-  { "id": 529, "name": "Psylocke" },
-  { "id": 530, "name": "Punisher" },
-  { "id": 531, "name": "Purple Man" },
+  {
+    "id": 528,
+    "name": "Professor Zoom",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/766.jpg"
+  },
+  {
+    "id": 529,
+    "name": "Psylocke",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/114.jpg"
+  },
+  {
+    "id": 530,
+    "name": "Punisher",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/112.jpg"
+  },
+  {
+    "id": 531,
+    "name": "Purple Man",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10451.jpg"
+  },
   {
     "id": 532,
     "name": "Pyro",
@@ -3082,47 +3197,102 @@
     "alignment": "-",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/10578.jpg"
   },
-  { "id": 534, "name": "Quantum" },
-  { "id": 535, "name": "Question" },
-  { "id": 536, "name": "Quicksilver" },
-  { "id": 537, "name": "Quill" },
+  {
+    "id": 534,
+    "name": "Quantum",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1157.jpg"
+  },
+  {
+    "id": 535,
+    "name": "Question",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/760.jpg"
+  },
+  {
+    "id": 536,
+    "name": "Quicksilver",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/115.jpg"
+  },
+  {
+    "id": 537,
+    "name": "Quill",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/830.jpg"
+  },
   {
     "id": 538,
     "name": "Ra's Al Ghul",
     "alignment": "bad",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/761.jpg"
   },
-  { "id": 539, "name": "Rachel Pirzad" },
+  {
+    "id": 539,
+    "name": "Rachel Pirzad",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1530.jpg"
+  },
   {
     "id": 540,
     "name": "Rambo",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/10475.jpg"
   },
-  { "id": 541, "name": "Raphael" },
+  {
+    "id": 541,
+    "name": "Raphael",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10328.jpg"
+  },
   {
     "id": 542,
     "name": "Raven",
     "alignment": "neutral",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/764.jpg"
   },
-  { "id": 543, "name": "Ray" },
-  { "id": 544, "name": "Razor-Fist II" },
+  {
+    "id": 543,
+    "name": "Ray",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10204.jpg"
+  },
+  {
+    "id": 544,
+    "name": "Razor-Fist II",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/935.jpg"
+  },
   {
     "id": 545,
     "name": "Red Arrow",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1013.jpg"
   },
-  { "id": 546, "name": "Red Hood" },
-  { "id": 547, "name": "Red Hulk" },
+  {
+    "id": 546,
+    "name": "Red Hood",
+    "alignment": "neutral",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/932.jpg"
+  },
+  {
+    "id": 547,
+    "name": "Red Hulk",
+    "alignment": "neutral",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1342.jpg"
+  },
   {
     "id": 548,
     "name": "Red Mist",
     "alignment": "bad",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1337.jpg"
   },
-  { "id": 549, "name": "Red Robin" },
+  {
+    "id": 549,
+    "name": "Red Robin",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10009.jpg"
+  },
   {
     "id": 550,
     "name": "Red Skull",
@@ -3135,25 +3305,60 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1149.jpg"
   },
-  { "id": 552, "name": "Redeemer II" },
-  { "id": 553, "name": "Redeemer III" },
-  { "id": 554, "name": "Renata Soliz" },
-  { "id": 555, "name": "Rey" },
+  {
+    "id": 552,
+    "name": "Redeemer II",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1081.jpg"
+  },
+  {
+    "id": 553,
+    "name": "Redeemer III",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1092.jpg"
+  },
+  {
+    "id": 554,
+    "name": "Renata Soliz",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1151.jpg"
+  },
+  {
+    "id": 555,
+    "name": "Rey",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10561.jpg"
+  },
   {
     "id": 556,
     "name": "Rhino",
     "alignment": "bad",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/15.jpg"
   },
-  { "id": 557, "name": "Rick Flag" },
-  { "id": 558, "name": "Riddler" },
+  {
+    "id": 557,
+    "name": "Rick Flag",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1352.jpg"
+  },
+  {
+    "id": 558,
+    "name": "Riddler",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/768.jpg"
+  },
   {
     "id": 559,
     "name": "Rip Hunter",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/10543.jpg"
   },
-  { "id": 560, "name": "Ripcord" },
+  {
+    "id": 560,
+    "name": "Ripcord",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1291.jpg"
+  },
   {
     "id": 561,
     "name": "Robin",
@@ -3166,48 +3371,108 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/849.jpg"
   },
-  { "id": 563, "name": "Robin III" },
+  {
+    "id": 563,
+    "name": "Robin III",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/769.jpg"
+  },
   {
     "id": 564,
     "name": "Robin V",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1473.jpg"
   },
-  { "id": 565, "name": "Robin VI" },
-  { "id": 566, "name": "Rocket Raccoon" },
+  {
+    "id": 565,
+    "name": "Robin VI",
+    "alignment": "neutral",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10394.jpg"
+  },
+  {
+    "id": 566,
+    "name": "Rocket Raccoon",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10010.jpg"
+  },
   {
     "id": 567,
     "name": "Rogue",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/831.jpg"
   },
-  { "id": 568, "name": "Ronin" },
-  { "id": 569, "name": "Rorschach" },
-  { "id": 570, "name": "Sabretooth" },
+  {
+    "id": 568,
+    "name": "Ronin",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1202.jpg"
+  },
+  {
+    "id": 569,
+    "name": "Rorschach",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/771.jpg"
+  },
+  {
+    "id": 570,
+    "name": "Sabretooth",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/17.jpg"
+  },
   {
     "id": 571,
     "name": "Sage",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/117.jpg"
   },
-  { "id": 572, "name": "Sandman" },
-  { "id": 573, "name": "Sasquatch" },
+  {
+    "id": 572,
+    "name": "Sandman",
+    "alignment": "neutral",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/621.jpg"
+  },
+  {
+    "id": 573,
+    "name": "Sasquatch",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/863.jpg"
+  },
   {
     "id": 574,
     "name": "Sauron",
     "alignment": "bad",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/10849.jpg"
   },
-  { "id": 575, "name": "Savage Dragon" },
-  { "id": 576, "name": "Scarecrow" },
+  {
+    "id": 575,
+    "name": "Savage Dragon",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1117.jpg"
+  },
+  {
+    "id": 576,
+    "name": "Scarecrow",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/819.jpg"
+  },
   {
     "id": 577,
     "name": "Scarlet Spider",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/174.jpg"
   },
-  { "id": 578, "name": "Scarlet Spider II" },
-  { "id": 579, "name": "Scarlet Witch" },
+  {
+    "id": 578,
+    "name": "Scarlet Spider II",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1536.jpg"
+  },
+  {
+    "id": 579,
+    "name": "Scarlet Witch",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/444.jpg"
+  },
   {
     "id": 580,
     "name": "Scorpia",
@@ -3226,14 +3491,24 @@
     "alignment": "bad",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1482.jpg"
   },
-  { "id": 583, "name": "Sentry" },
+  {
+    "id": 583,
+    "name": "Sentry",
+    "alignment": "neutral",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/447.jpg"
+  },
   {
     "id": 584,
     "name": "Shadow King",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/121.jpg"
   },
-  { "id": 585, "name": "Shadow Lass" },
+  {
+    "id": 585,
+    "name": "Shadow Lass",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1195.jpg"
+  },
   {
     "id": 586,
     "name": "Shadowcat",
@@ -3246,10 +3521,30 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/454.jpg"
   },
-  { "id": 588, "name": "Shatterstar" },
-  { "id": 589, "name": "She-Hulk" },
-  { "id": 590, "name": "She-Thing" },
-  { "id": 591, "name": "Shocker" },
+  {
+    "id": 588,
+    "name": "Shatterstar",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/124.jpg"
+  },
+  {
+    "id": 589,
+    "name": "She-Hulk",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/125.jpg"
+  },
+  {
+    "id": 590,
+    "name": "She-Thing",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/461.jpg"
+  },
+  {
+    "id": 591,
+    "name": "Shocker",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/19.jpg"
+  },
   {
     "id": 592,
     "name": "Shriek",
@@ -3262,8 +3557,18 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1188.jpg"
   },
-  { "id": 594, "name": "Sif" },
-  { "id": 595, "name": "Silk" },
+  {
+    "id": 594,
+    "name": "Sif",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1533.jpg"
+  },
+  {
+    "id": 595,
+    "name": "Silk",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10495.jpg"
+  },
   {
     "id": 596,
     "name": "Silk Spectre",
@@ -3276,148 +3581,523 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1058.jpg"
   },
-  { "id": 598, "name": "Silver Surfer" },
+  {
+    "id": 598,
+    "name": "Silver Surfer",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/127.jpg"
+  },
   {
     "id": 599,
     "name": "Silverclaw",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1019.jpg"
   },
-  { "id": 600, "name": "Simon Baz" },
-  { "id": 601, "name": "Sinestro" },
-  { "id": 602, "name": "Siren" },
+  {
+    "id": 600,
+    "name": "Simon Baz",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10649.jpg"
+  },
+  {
+    "id": 601,
+    "name": "Sinestro",
+    "alignment": "neutral",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/781.jpg"
+  },
+  {
+    "id": 602,
+    "name": "Siren",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1387.jpg"
+  },
   {
     "id": 603,
     "name": "Siren II",
     "alignment": "bad",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1386.jpg"
   },
-  { "id": 604, "name": "Siryn" },
+  {
+    "id": 604,
+    "name": "Siryn",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/833.jpg"
+  },
   {
     "id": 605,
     "name": "Skaar",
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/1341.jpg"
   },
-  { "id": 606, "name": "Snake-Eyes" },
-  { "id": 607, "name": "Snowbird" },
-  { "id": 608, "name": "Sobek" },
+  {
+    "id": 606,
+    "name": "Snake-Eyes",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10437.jpg"
+  },
+  {
+    "id": 607,
+    "name": "Snowbird",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/130.jpg"
+  },
+  {
+    "id": 608,
+    "name": "Sobek",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1166.jpg"
+  },
   {
     "id": 609,
     "name": "Solomon Grundy",
     "alignment": "bad",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/782.jpg"
   },
-  { "id": 610, "name": "Songbird" },
+  {
+    "id": 610,
+    "name": "Songbird",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/131.jpg"
+  },
   { "id": 611, "name": "Space Ghost" },
-  { "id": 612, "name": "Spawn" },
-  { "id": 613, "name": "Spectre" },
-  { "id": 614, "name": "Speedball" },
-  { "id": 615, "name": "Speedy" },
+  {
+    "id": 612,
+    "name": "Spawn",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/842.jpg"
+  },
+  {
+    "id": 613,
+    "name": "Spectre",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/784.jpg"
+  },
+  {
+    "id": 614,
+    "name": "Speedball",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/132.jpg"
+  },
+  {
+    "id": 615,
+    "name": "Speedy",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10558.jpg"
+  },
   { "id": 616, "name": "Speedy" },
   { "id": 617, "name": "Spider-Carnage" },
-  { "id": 618, "name": "Spider-Girl" },
-  { "id": 619, "name": "Spider-Gwen" },
-  { "id": 620, "name": "Spider-Man" },
-  { "id": 621, "name": "Spider-Man" },
-  { "id": 622, "name": "Spider-Man" },
-  { "id": 623, "name": "Spider-Woman" },
-  { "id": 624, "name": "Spider-Woman II" },
-  { "id": 625, "name": "Spider-Woman III" },
-  { "id": 626, "name": "Spider-Woman IV" },
-  { "id": 627, "name": "Spock" },
+  {
+    "id": 618,
+    "name": "Spider-Girl",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/480.jpg"
+  },
+  {
+    "id": 619,
+    "name": "Spider-Gwen",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10507.jpg"
+  },
+  {
+    "id": 620,
+    "name": "Spider-Man",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/133.jpg"
+  },
+  {
+    "id": 621,
+    "name": "Spider-Man",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/479.jpg"
+  },
+  {
+    "id": 622,
+    "name": "Spider-Man",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10647.jpg"
+  },
+  {
+    "id": 623,
+    "name": "Spider-Woman",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/481.jpg"
+  },
+  {
+    "id": 624,
+    "name": "Spider-Woman II",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/483.jpg"
+  },
+  {
+    "id": 625,
+    "name": "Spider-Woman III",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/482.jpg"
+  },
+  {
+    "id": 626,
+    "name": "Spider-Woman IV",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/883.jpg"
+  },
+  {
+    "id": 627,
+    "name": "Spock",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10566.jpg"
+  },
   { "id": 628, "name": "Spyke" },
-  { "id": 629, "name": "Stacy X" },
-  { "id": 630, "name": "Star-Lord" },
-  { "id": 631, "name": "Stardust" },
-  { "id": 632, "name": "Starfire" },
-  { "id": 633, "name": "Stargirl" },
+  {
+    "id": 629,
+    "name": "Stacy X",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/485.jpg"
+  },
+  {
+    "id": 630,
+    "name": "Star-Lord",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10015.jpg"
+  },
+  {
+    "id": 631,
+    "name": "Stardust",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1052.jpg"
+  },
+  {
+    "id": 632,
+    "name": "Starfire",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/786.jpg"
+  },
+  {
+    "id": 633,
+    "name": "Stargirl",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1326.jpg"
+  },
   { "id": 634, "name": "Static" },
   { "id": 635, "name": "Steel" },
-  { "id": 636, "name": "Stephanie Powell" },
-  { "id": 637, "name": "Steppenwolf" },
-  { "id": 638, "name": "Storm" },
-  { "id": 639, "name": "Stormtrooper" },
-  { "id": 640, "name": "Sunspot" },
-  { "id": 641, "name": "Superboy" },
-  { "id": 642, "name": "Superboy-Prime" },
+  {
+    "id": 636,
+    "name": "Stephanie Powell",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1355.jpg"
+  },
+  {
+    "id": 637,
+    "name": "Steppenwolf",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10653.jpg"
+  },
+  {
+    "id": 638,
+    "name": "Storm",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/135.jpg"
+  },
+  {
+    "id": 639,
+    "name": "Stormtrooper",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10539.jpg"
+  },
+  {
+    "id": 640,
+    "name": "Sunspot",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/138.jpg"
+  },
+  {
+    "id": 641,
+    "name": "Superboy",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/789.jpg"
+  },
+  {
+    "id": 642,
+    "name": "Superboy-Prime",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1535.jpg"
+  },
   { "id": 643, "name": "Supergirl" },
-  { "id": 644, "name": "Superman" },
-  { "id": 645, "name": "Swamp Thing" },
+  {
+    "id": 644,
+    "name": "Superman",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+  },
+  {
+    "id": 645,
+    "name": "Swamp Thing",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/792.jpg"
+  },
   { "id": 646, "name": "Swarm" },
-  { "id": 647, "name": "Sylar" },
-  { "id": 648, "name": "Synch" },
-  { "id": 649, "name": "T-1000" },
-  { "id": 650, "name": "T-800" },
-  { "id": 651, "name": "T-850" },
+  {
+    "id": 647,
+    "name": "Sylar",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/953.jpg"
+  },
+  {
+    "id": 648,
+    "name": "Synch",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/175.jpg"
+  },
+  {
+    "id": 649,
+    "name": "T-1000",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10411.jpg"
+  },
+  {
+    "id": 650,
+    "name": "T-800",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10409.jpg"
+  },
+  {
+    "id": 651,
+    "name": "T-850",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10410.jpg"
+  },
   { "id": 652, "name": "T-X" },
-  { "id": 653, "name": "Taskmaster" },
+  {
+    "id": 653,
+    "name": "Taskmaster",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/21.jpg"
+  },
   { "id": 654, "name": "Tempest" },
-  { "id": 655, "name": "Thanos" },
-  { "id": 656, "name": "The Cape" },
-  { "id": 657, "name": "The Comedian" },
-  { "id": 658, "name": "Thing" },
-  { "id": 659, "name": "Thor" },
+  {
+    "id": 655,
+    "name": "Thanos",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1305.jpg"
+  },
+  {
+    "id": 656,
+    "name": "The Cape",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1375.jpg"
+  },
+  {
+    "id": 657,
+    "name": "The Comedian",
+    "alignment": "neutral",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1062.jpg"
+  },
+  {
+    "id": 658,
+    "name": "Thing",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/139.jpg"
+  },
+  {
+    "id": 659,
+    "name": "Thor",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/140.jpg"
+  },
   { "id": 660, "name": "Thor Girl" },
-  { "id": 661, "name": "Thunderbird" },
+  {
+    "id": 661,
+    "name": "Thunderbird",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/611.jpg"
+  },
   { "id": 662, "name": "Thunderbird II" },
-  { "id": 663, "name": "Thunderbird III" },
+  {
+    "id": 663,
+    "name": "Thunderbird III",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/141.jpg"
+  },
   { "id": 664, "name": "Thunderstrike" },
-  { "id": 665, "name": "Thundra" },
+  {
+    "id": 665,
+    "name": "Thundra",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/508.jpg"
+  },
   { "id": 666, "name": "Tiger Shark" },
-  { "id": 667, "name": "Tigra" },
+  {
+    "id": 667,
+    "name": "Tigra",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/42.jpg"
+  },
   { "id": 668, "name": "Tinkerer" },
   { "id": 669, "name": "Titan" },
   { "id": 670, "name": "Toad" },
   { "id": 671, "name": "Toxin" },
-  { "id": 672, "name": "Toxin" },
-  { "id": 673, "name": "Tracy Strauss" },
+  {
+    "id": 672,
+    "name": "Toxin",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10494.jpg"
+  },
+  {
+    "id": 673,
+    "name": "Tracy Strauss",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1312.jpg"
+  },
   { "id": 674, "name": "Trickster" },
   { "id": 675, "name": "Trigon" },
   { "id": 676, "name": "Triplicate Girl" },
-  { "id": 677, "name": "Triton" },
-  { "id": 678, "name": "Two-Face" },
-  { "id": 679, "name": "Ultragirl" },
+  {
+    "id": 677,
+    "name": "Triton",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/513.jpg"
+  },
+  {
+    "id": 678,
+    "name": "Two-Face",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/802.jpg"
+  },
+  {
+    "id": 679,
+    "name": "Ultragirl",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1295.jpg"
+  },
   { "id": 680, "name": "Ultron" },
   { "id": 681, "name": "Utgard-Loki" },
   { "id": 682, "name": "Vagabond" },
-  { "id": 683, "name": "Valerie Hart" },
-  { "id": 684, "name": "Valkyrie" },
+  {
+    "id": 683,
+    "name": "Valerie Hart",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1004.jpg"
+  },
+  {
+    "id": 684,
+    "name": "Valkyrie",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/147.jpg"
+  },
   { "id": 685, "name": "Vanisher" },
-  { "id": 686, "name": "Vegeta" },
+  {
+    "id": 686,
+    "name": "Vegeta",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1206.jpg"
+  },
   { "id": 687, "name": "Venom" },
   { "id": 688, "name": "Venom II" },
-  { "id": 689, "name": "Venom III" },
+  {
+    "id": 689,
+    "name": "Venom III",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1042.jpg"
+  },
   { "id": 690, "name": "Venompool" },
-  { "id": 691, "name": "Vertigo II" },
+  {
+    "id": 691,
+    "name": "Vertigo II",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/149.jpg"
+  },
   { "id": 692, "name": "Vibe" },
-  { "id": 693, "name": "Vindicator" },
+  {
+    "id": 693,
+    "name": "Vindicator",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/150.jpg"
+  },
   { "id": 694, "name": "Vindicator" },
-  { "id": 695, "name": "Violator" },
-  { "id": 696, "name": "Violet Parr" },
-  { "id": 697, "name": "Vision" },
+  {
+    "id": 695,
+    "name": "Violator",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1064.jpg"
+  },
+  {
+    "id": 696,
+    "name": "Violet Parr",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/825.jpg"
+  },
+  {
+    "id": 697,
+    "name": "Vision",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/532.jpg"
+  },
   { "id": 698, "name": "Vision II" },
   { "id": 699, "name": "Vixen" },
   { "id": 700, "name": "Vulcan" },
-  { "id": 701, "name": "Vulture" },
+  {
+    "id": 701,
+    "name": "Vulture",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1031.jpg"
+  },
   { "id": 702, "name": "Walrus" },
   { "id": 703, "name": "War Machine" },
-  { "id": 704, "name": "Warbird" },
+  {
+    "id": 704,
+    "name": "Warbird",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/153.jpg"
+  },
   { "id": 705, "name": "Warlock" },
   { "id": 706, "name": "Warp" },
-  { "id": 707, "name": "Warpath" },
+  {
+    "id": 707,
+    "name": "Warpath",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/541.jpg"
+  },
   { "id": 708, "name": "Wasp" },
   { "id": 709, "name": "Watcher" },
-  { "id": 710, "name": "Weapon XI" },
-  { "id": 711, "name": "White Canary" },
+  {
+    "id": 710,
+    "name": "Weapon XI",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1318.jpg"
+  },
+  {
+    "id": 711,
+    "name": "White Canary",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10542.jpg"
+  },
   { "id": 712, "name": "White Queen" },
-  { "id": 713, "name": "Wildfire" },
-  { "id": 714, "name": "Winter Soldier" },
+  {
+    "id": 713,
+    "name": "Wildfire",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1186.jpg"
+  },
+  {
+    "id": 714,
+    "name": "Winter Soldier",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/10027.jpg"
+  },
   { "id": 715, "name": "Wiz Kid" },
   { "id": 716, "name": "Wolfsbane" },
-  { "id": 717, "name": "Wolverine" },
+  {
+    "id": 717,
+    "name": "Wolverine",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/161.jpg"
+  },
   { "id": 718, "name": "Wonder Girl" },
-  { "id": 719, "name": "Wonder Man" },
+  {
+    "id": 719,
+    "name": "Wonder Man",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/162.jpg"
+  },
   {
     "id": 720,
     "name": "Wonder Woman",
@@ -3425,11 +4105,26 @@
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/807.jpg"
   },
   { "id": 721, "name": "Wondra" },
-  { "id": 722, "name": "Wyatt Wingfoot" },
+  {
+    "id": 722,
+    "name": "Wyatt Wingfoot",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/164.jpg"
+  },
   { "id": 723, "name": "X-23" },
-  { "id": 724, "name": "X-Man" },
+  {
+    "id": 724,
+    "name": "X-Man",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1150.jpg"
+  },
   { "id": 725, "name": "Yellow Claw" },
-  { "id": 726, "name": "Yellowjacket" },
+  {
+    "id": 726,
+    "name": "Yellowjacket",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/70.jpg"
+  },
   { "id": 727, "name": "Yellowjacket II" },
   { "id": 728, "name": "Ymir" },
   { "id": 729, "name": "Yoda" },

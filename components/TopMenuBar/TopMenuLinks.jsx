@@ -19,6 +19,8 @@ import Menu from '@material-ui/icons/Menu';
 import Instagram from '@material-ui/icons/Instagram';
 import LinkedIn from '@material-ui/icons/LinkedIn';
 import GitHub from '@material-ui/icons/GitHub';
+// Lodash
+import get from 'lodash/get';
 // My Components
 
 // Images
@@ -67,6 +69,7 @@ const useStyles = makeStyles(localStyle);
 
 const Component = (props) => {
   const classes = useStyles();
+  const language = get(props, 'params.language', 'pt-br');
 
   const links = {
     github: {

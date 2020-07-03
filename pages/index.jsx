@@ -12,7 +12,7 @@ import TopMenuBar from 'components/TopMenuBar/TopMenuBar';
 import Header from 'components/Containers/Header';
 import Section from 'components/Containers/Section';
 import SubSection from 'components/Containers/SubSection';
-import Bold from 'components/Bold';
+import Text from 'components/Text';
 import Profile from 'components/SubSections/Profile';
 import GithubChart from '../components/SubSections/GithubChart';
 import CustomLink from 'components/CustomLink';
@@ -62,15 +62,15 @@ const Index = (props) => {
     <>
       {/* <SEO /> */}
       {/* <GoogleAnalytics /> */}
-      {/* <TopMenuBar /> */}
+      <TopMenuBar />
       <Header />
 
       <Section raised>
         <h1>Index Principal</h1>
         <br />
         <br />
-        <CustomLink href="/[language]/heroes-villains" as="/pt-br/heroes-villains">
-          <a>Go to page</a>
+        <CustomLink href="/[language]/heroes-villains" as="/en-us/heroes-villains">
+          <Text>Go to page</Text>
         </CustomLink>
         <br />
         <br />

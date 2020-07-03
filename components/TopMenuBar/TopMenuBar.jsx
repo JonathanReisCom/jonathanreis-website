@@ -9,12 +9,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
-import Typography from '@material-ui/core/Typography';
 // @material-ui/icons
 import Menu from '@material-ui/icons/Menu';
 // My Components
 import TopMenuLinks from 'components/TopMenuBar/TopMenuLinks';
-import Bold from 'components/Bold';
+import Text from 'components/Text';
+import CustomLink from 'components/CustomLink';
+// Lodash
+import get from 'lodash/get';
 // Images
 import logo from 'assets/images/logo-jonathan-reis-com.png';
 
@@ -95,6 +97,7 @@ const useStyles = makeStyles(localStyle);
 
 const Component = (props) => {
   const classes = useStyles();
+  const language = get(props, 'params.language', 'pt-br');
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -129,9 +132,12 @@ const Component = (props) => {
   };
 
   const brand = (
-    <Typography variant={'h1'} className={classes.h1Variant}>
-      <Bold>JonathanReis.com</Bold>
-    </Typography>
+    // <CustomLink href={`/[language]`} as={`/${language}`}>
+    <CustomLink href={`/`} as={`/`}>
+      <Text variant={'h1'} bold className={classes.h1Variant}>
+        JonathanReis.com
+      </Text>
+    </CustomLink>
   );
   // const brand = (
   //   <div className={classes.brand}>

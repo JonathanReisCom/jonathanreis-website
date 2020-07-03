@@ -69,6 +69,8 @@ const useStyles = makeStyles(localStyle);
 const Index = (props) => {
   const classes = useStyles();
   // const router = useRouter();
+  const language = get(props, 'params.language', 'pt-br');
+  const isBreakpointXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   const items = get(props, 'items', []);
   const itemsPerPage = 12;
@@ -81,8 +83,6 @@ const Index = (props) => {
     setPage(value);
     setSlice([x, y]);
   };
-
-  const isBreakpointXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
     <>
@@ -113,7 +113,7 @@ const Index = (props) => {
             {items.slice(slice[0], slice[1]).map((obj, i) => {
               const name = obj.name.toLowerCase().replace(/ /g, '-');
               const href = `/[language]/heroes-villains/${obj.id}/${name}`;
-              const as = `/pt-br/heroes-villains/${obj.id}/${name}`;
+              const as = `/${language}/heroes-villains/${obj.id}/${name}`;
               const img = get(obj, 'image', null);
               const alignment = get(obj, 'alignment', null);
 
@@ -139,6 +139,16 @@ const Index = (props) => {
                 </Grid>
               );
             })}
+          </Grid>
+
+          <Grid container justify="center" direction="row" className={classes.marginTop}>
+            <Pagination
+              count={totalPages}
+              page={page}
+              onChange={handleChange}
+              color="primary"
+              size={isBreakpointXS ? 'small' : 'large'}
+            />
           </Grid>
         </SubSection>
       </Section>

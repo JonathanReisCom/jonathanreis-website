@@ -68,6 +68,7 @@ const useStyles = makeStyles(localStyle);
 const Index = (props) => {
   const classes = useStyles();
   const router = useRouter();
+  const language = get(props, 'params.language', 'pt-br');
   const hero = get(props, 'items', null);
 
   const makeTable = (key, element) => {
