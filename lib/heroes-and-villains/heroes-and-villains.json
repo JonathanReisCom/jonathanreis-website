@@ -4001,7 +4001,12 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/42.jpg"
   },
-  { "id": 668, "name": "Tinkerer" },
+  {
+    "id": 668,
+    "name": "Tinkerer",
+    "alignment": "bad",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/1036.jpg"
+  },
   {
     "id": 669,
     "name": "Titan",
@@ -4218,7 +4223,12 @@
     "alignment": "good",
     "image": "https://www.superherodb.com/pictures2/portraits/10/100/153.jpg"
   },
-  { "id": 705, "name": "Warlock" },
+  {
+    "id": 705,
+    "name": "Warlock",
+    "alignment": "good",
+    "image": "https://www.superherodb.com/pictures2/portraits/10/100/154.jpg"
+  },
   {
     "id": 706,
     "name": "Warp",
