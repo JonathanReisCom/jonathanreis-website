@@ -23,6 +23,7 @@ module.exports = (namespace) => {
       return {
         domain: 'https://jonathanreiscom.github.io',
         folder: '/jonathanreis-website', // My GitHub Pages folder
+        filesystem: 'out',
         exportTrailingSlash: true,
       };
   }

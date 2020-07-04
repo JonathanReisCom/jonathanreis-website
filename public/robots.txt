@@ -1,4 +1,3 @@
-
 User-agent: *
-Sitemap: http://localhost/jonathanreis.com/sitemap.xml
+Sitemap: https://jonathanreiscom.github.io/jonathanreis-website/sitemap.xml
   

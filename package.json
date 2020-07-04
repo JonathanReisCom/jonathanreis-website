@@ -24,12 +24,13 @@
     "l_e": "echo 'Exporting...' && NAMESPACE=export_linux next export -o /var/www/html/jonathanreis.com/",
     "l_f": "echo 'Sitemap...' && NAMESPACE=export_linux node lib/generate-sitemap.js",
     "-----": "echo '...'",
-    "deploy_ghpages": "yarn l_a && yarn l_b && yarn pd_c && yarn pd_d && yarn pd_e && yarn pd_f && yarn pd_g",
+    "deploy_ghpages": "yarn l_a && yarn l_b && yarn pd_c && yarn pd_d && yarn pd_e && yarn pd_f && yarn pd_g && yarn pd_h",
     "pd_c": "echo 'Remove old build...' && rm -r out/* || echo 'Nothing to remove.' ",
     "pd_d": "echo 'Building...' && NAMESPACE=ghpages next build",
     "pd_e": "echo 'Exporting...' && NAMESPACE=ghpages next export -o out/",
     "pd_f": "echo 'Copy .nojekyll...' && cp .nojekyll out/",
-    "pd_g": "echo 'Deploying...' && gh-pages -t true -d out/"
+    "pd_g": "echo 'Sitemap...' && NAMESPACE=ghpages node lib/generate-sitemap.js",
+    "pd_h": "echo 'Deploying...' && gh-pages -t true -d out/"
   },
   "homepage": "https://github.com/JonathanReisCom/jonathanreis-website",
   "repository": {
