@@ -16,12 +16,13 @@
     "dev": "NAMESPACE=dev next",
     "start": "NAMESPACE=dev next start",
     "----": "echo '...'",
-    "export_linux": "yarn l_a && yarn l_b && yarn l_c && yarn l_d && yarn l_e",
+    "export_linux": "yarn l_a && yarn l_b && yarn l_c && yarn l_d && yarn l_e && yarn l_f",
     "l_a": "echo 'Cleaning Babel...' && rm -rf node_modules/.cache/babel-loader || echo 'Nothing to remove.' ",
     "l_b": "echo 'Installing dependencies...' && yarn install",
     "l_c": "echo 'Remove old build...' && rm -r /var/www/html/jonathanreis.com/* || echo 'Nothing to remove.' ",
     "l_d": "echo 'Building...' && NAMESPACE=export_linux next build",
     "l_e": "echo 'Exporting...' && NAMESPACE=export_linux next export -o /var/www/html/jonathanreis.com/",
+    "l_f": "echo 'Sitemap...' && NAMESPACE=export_linux node lib/generate-sitemap.js",
     "-----": "echo '...'",
     "deploy_ghpages": "yarn l_a && yarn l_b && yarn pd_c && yarn pd_d && yarn pd_e && yarn pd_f && yarn pd_g",
     "pd_c": "echo 'Remove old build...' && rm -r out/* || echo 'Nothing to remove.' ",
@@ -81,6 +82,7 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
+    "globby": "^11.0.1",
     "prettier": "^2.0.4"
   }
 }

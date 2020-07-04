@@ -15,7 +15,7 @@ import SubSection from 'components/Containers/SubSection';
 import Text from 'components/Text';
 import Profile from 'components/SubSections/Profile';
 import GithubChart from '../components/SubSections/GithubChart';
-import CustomLink from 'components/CustomLink';
+import { CustomLink } from 'components/Links';
 
 // Style
 import theme from 'components/Theme';

@@ -3,52 +3,34 @@ const withImages = require('next-images');
 const withSass = require('@zeit/next-sass');
 const webpack = require('webpack');
 const path = require('path');
+const assetPrefixForNamespace = require('./config');
 
-const assetPrefixForNamespace = (namespace) => {
-  switch (namespace) {
-    case 'dev':
-      return {
-        url: '',
-        exportTrailingSlash: false,
-      };
-    case 'export_linux':
-      return {
-        url: '/jonathanreis.com', // My apache folder in laptop with linux
-        exportTrailingSlash: true,
-      };
-    case 'prod':
-      return {
-        url: 'https://jonathanreis.com',
-        exportTrailingSlash: false,
-      };
-    case 'ghpages':
-      return {
-        url: '/jonathanreis-website', // My GitHub Pages folder
-        exportTrailingSlash: true,
-      };
-  }
-};
-
-const config = assetPrefixForNamespace(process.env.NAMESPACE);
+const myConfig = assetPrefixForNamespace(process.env.NAMESPACE);
 
 module.exports = withPlugins([[withSass], [withImages]], {
   env: {
-    APP_URL: config.url,
-    NEED_DIRECT_LINK: config.exportTrailingSlash,
+    APP_URL: myConfig.folder,
+    NEED_DIRECT_LINK: myConfig.exportTrailingSlash,
     PROJECT_ROOT: __dirname,
     HEROES_AND_VILLAINS_API_URL: 'https://superheroapi.com/api/1148509085520339',
     USE_CACHE: 'true',
   },
 
   // Folders with index.html on export
-  exportTrailingSlash: config.exportTrailingSlash,
+  exportTrailingSlash: myConfig.exportTrailingSlash,
 
   // Set prefix for absolute links
-  assetPrefix: config.url,
+  assetPrefix: myConfig.folder,
 
-  webpack: (config) => {
-    config.output.publicPath = `${config.url}${config.output.publicPath}`;
+  webpack: (config, { isServer }) => {
+    config.output.publicPath = `${myConfig.folder}${config.output.publicPath}`;
     config.resolve.modules.push(path.resolve('./'));
+
+    // Create my sitemap.xml
+    // if (isServer) {
+    //   require('./lib/generate-sitemap');
+    // }
+
     return config;
   },
 });

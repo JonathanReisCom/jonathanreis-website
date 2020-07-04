@@ -14,7 +14,7 @@ import Menu from '@material-ui/icons/Menu';
 // My Components
 import TopMenuLinks from 'components/TopMenuBar/TopMenuLinks';
 import Text from 'components/Text';
-import CustomLink from 'components/CustomLink';
+import { CustomLink } from 'components/Links';
 // Lodash
 import get from 'lodash/get';
 // Images

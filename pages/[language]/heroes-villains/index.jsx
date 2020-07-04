@@ -18,7 +18,7 @@ import Header from 'components/Containers/Header';
 import Section from 'components/Containers/Section';
 import SubSection from 'components/Containers/SubSection';
 import Text from 'components/Text';
-import CustomLink from 'components/CustomLink';
+import { CustomLink, ChangeLink } from 'components/Links';
 // API Heroes and Villains
 import { getAllHeroesIndex } from '../../../lib/heroes-and-villains/api';
 // Choosem Image for Header
@@ -92,17 +92,11 @@ const Index = (props) => {
     setSlice([x, y]);
 
     if (value != pageFromLink) {
-      router.push(
-        {
-          pathname: `/[language]/heroes-villains`,
-          query: { page: value },
-        },
-        {
-          pathname: `/${language}/heroes-villains`,
-          query: { page: value },
-        },
-        { shallow: true }
-      );
+      ChangeLink({
+        href: `/[language]/heroes-villains`,
+        as: `/${language}/heroes-villains`,
+        query: { page: value },
+      });
     }
   };
 
