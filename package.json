@@ -53,9 +53,10 @@
     "url": "https://github.com/JonathanReisCom/jonathanreis-website/issues"
   },
   "dependencies": {
-    "@material-ui/core": "4.10.2",
+    "@material-ui/core": "4.11.0",
     "@material-ui/icons": "4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
+    "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "1.0.1",
     "babel-plugin-styled-components": "^1.10.7",
     "classnames": "2.2.6",
@@ -64,7 +65,7 @@
     "next": "^9.4.4",
     "next-compose-plugins": "2.2.0",
     "next-images": "1.4.0",
-    "next-seo": "^4.6.0",
+    "next-seo": "^4.7.1",
     "nextjs-redirect": "4.0.2",
     "node-sass": "4.14.1",
     "path": "0.12.7",
@@ -73,8 +74,8 @@
     "react-datetime": "2.16.3",
     "react-dom": "^16.13.1",
     "react-dummy-image": "^1.0.5",
-    "react-ga": "^3.0.0",
-    "react-lazyload": "^2.6.8",
+    "react-ga": "^3.1.1",
+    "react-lazyload": "^3.0.0",
     "react-spring": "^8.0.27",
     "react-swipeable-views": "0.13.9",
     "react-transition-group": "^4.4.1",
@@ -82,7 +83,7 @@
     "webpack": "4.43.0"
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^3.1.0",
     "globby": "^11.0.1",
     "prettier": "^2.0.4"
   }
