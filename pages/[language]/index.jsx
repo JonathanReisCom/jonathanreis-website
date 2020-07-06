@@ -42,7 +42,7 @@ const Index = (props) => {
       <Header />
 
       <Section raised>
-        <SubSection maxWidth="sm">
+        <SubSection raised maxWidth="sm">
           <h1>/[language]</h1>
           <p>
             <pre>{JSON.stringify(router, null, 2)}</pre>

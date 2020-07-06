@@ -66,14 +66,19 @@ const Index = (props) => {
       <Header />
 
       <Section raised>
-        <h1>Index Principal</h1>
-        <br />
-        <br />
-        <CustomLink href="/[language]/heroes-villains" as="/en-us/heroes-villains">
-          <Text>Go to page</Text>
-        </CustomLink>
-        <br />
-        <br />
+        <SubSection raised maxWidth="md" color={'light_gray'}>
+          <Grid container justify="center">
+            <Text variant="h1" bold center>
+              Index Principal
+            </Text>
+          </Grid>
+
+          <Grid container justify="center">
+            <CustomLink href="/[language]/heroes-villains" as="/en-us/heroes-villains">
+              <Text>Go to page</Text>
+            </CustomLink>
+          </Grid>
+        </SubSection>
       </Section>
 
       <Section raised>

@@ -7,11 +7,22 @@ import Container from '@material-ui/core/Container';
 // Style
 import theme from 'components/Theme';
 const padding = theme.sizes.subSectionPadding;
+const overSize = theme.sizes.sectionOverSize;
 const localStyle = {
   subSection: {
     paddingTop: padding,
     paddingBottom: padding,
     position: 'relative',
+  },
+  full: {
+    minHeight: '100vh',
+  },
+  noPadding: {
+    paddingTop: 0,
+    paddingBottom: 0,
+  },
+  raised: {
+    paddingTop: overSize,
   },
   noPaddingforMobile: {
     [theme.breakpoints.down('xs')]: {
@@ -21,6 +32,7 @@ const localStyle = {
   },
   relative: {
     position: 'relative',
+    height: '100%',
   },
   overBottom: {
     height: `calc(100% - ${padding * 2 - padding / 2}px)`,
@@ -73,8 +85,11 @@ const Component = (props) => {
     <div
       className={classNames({
         [classes.subSection]: true,
+        [classes.raised]: props.raised,
+        [classes.full]: props.full,
         [classes.overBottom]: props.overBottom,
         [classes.noPaddingforMobile]: props.noPaddingforMobile,
+        [classes.noPadding]: props.noPadding,
       })}>
       {divColored}
       <Container maxWidth={maxWidth()} disableGutters className={classes.relative}>

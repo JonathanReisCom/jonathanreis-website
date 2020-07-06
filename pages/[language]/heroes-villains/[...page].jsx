@@ -30,7 +30,7 @@ import { getAllHeroesIndex, getHeroById } from '../../../lib/heroes-and-villains
 // Lodash
 import get from 'lodash/get';
 import capitalize from 'lodash/capitalize';
-// Choosem Image for Header
+// Image for Header
 import headerImage from '../../../public/img/bg-marvel-vs-dc-heroes.jpg';
 
 // Style
@@ -158,7 +158,7 @@ const Index = (props) => {
       <Header images={[headerImage]} />
 
       <Section raised>
-        <SubSection maxWidth="sm" color={'light_gray'} noPaddingforMobile>
+        <SubSection raised maxWidth="sm" color={'light_gray'} noPaddingforMobile>
           <Grid container justify="center" direction="column">
             <Card className={classes.card}>
               {/* Navigation */}

@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 // My Components
 import SEO from 'components/Seo';
 import GoogleAnalytics from 'components/GoogleAnalytics';
@@ -12,6 +13,12 @@ import TopMenuBar from 'components/TopMenuBar/TopMenuBar';
 import Header from 'components/Containers/Header';
 import Section from 'components/Containers/Section';
 import SubSection from 'components/Containers/SubSection';
+import Text from 'components/Text';
+import FrameDevice from 'components/FrameDevice/FrameDevice';
+
+// Images for Hyper
+import hyperDesktop from '../../public/img/hyper-english-desktop.png';
+import hyperMobile from '../../public/img/hyper-english-mobile.png';
 
 // Style
 import theme from 'components/Theme';
@@ -27,26 +34,78 @@ const localStyle = {
   paper: {
     padding: 16,
   },
+
+  portifolioContainer: {
+    width: '100%',
+    height: '100%',
+    marginTop: '40px',
+  },
+
+  hyperDeviceContainer: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    position: 'relative',
+    alignSelf: 'center',
+    overflow: 'hidden',
+    width: '100%',
+  },
+  hyperDesktop: {
+    width: '80%',
+  },
+  hyperMobile: {
+    // position: 'absolute',
+    // bottom: 150,
+    // right: 150,
+    width: 200,
+    // [theme.breakpoints.down('md')]: {
+    //   right: 100,
+    // },
+    // [theme.breakpoints.down('xs')]: {
+    //   position: 'relative',
+    //   width: '50%',
+    //   right: 'auto',
+    //   bottom: 'auto',
+    // },
+  },
 };
 const useStyles = makeStyles(localStyle);
 
 const Index = (props) => {
   const classes = useStyles();
   const router = useRouter();
+  const isBreakpointXS = useMediaQuery(theme.breakpoints.down('xs'));
+  const isBreakpointMD = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <>
       <SEO />
       <GoogleAnalytics />
       <TopMenuBar />
-      <Header />
+      <Header full />
 
       <Section raised>
-        <SubSection maxWidth="sm">
-          {/* <Device name="iphone-8" color="gold" url="https://www.google.com" />;<h1>/[language]</h1> */}
-          <p>
-            <pre>{JSON.stringify(router, null, 2)}</pre>
-          </p>
+        <SubSection full maxWidth="lg" color={'gradient_orange'}>
+          <Grid container direction="column" className={classes.portifolioContainer}>
+            <Text variant="h2" bold center>
+              Hyper English
+            </Text>
+            <div className={classes.hyperDeviceContainer}>
+              <FrameDevice dualright images={[hyperDesktop, hyperMobile]} className={classes.hyperDesktop} />
+            </div>
+          </Grid>
+        </SubSection>
+
+        <SubSection full maxWidth="lg" color={'gradient_gray'}>
+          <Grid container direction="column" className={classes.portifolioContainer}>
+            <Text variant="h2" bold center>
+              Cardapio Online do Restaurante Joaquina
+            </Text>
+            <div className={classes.hyperDeviceContainer}>
+              <FrameDevice iphonex image={hyperMobile} className={classes.hyperMobile} />
+            </div>
+          </Grid>
         </SubSection>
       </Section>
     </>

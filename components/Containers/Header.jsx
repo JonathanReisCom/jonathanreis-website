@@ -1,6 +1,6 @@
 import React from 'react';
 // nodejs library that concatenates classes
-// import classNames from 'classnames';
+import classNames from 'classnames';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -29,13 +29,15 @@ const localStyle = {
     padding: '0',
     display: 'flex',
   },
+  full: {
+    height: '100vh',
+  },
   container: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
-
-    marginTop: '90px', // Header
-    marginBottom: '70px', // Section
+    marginTop: '80px', // TopMenuBar
+    marginBottom: '70px', // Raised
 
     [theme.breakpoints.down('xs')]: {
       paddingBottom: '10vh',
@@ -86,19 +88,11 @@ const localStyle = {
 };
 const useStyles = makeStyles(localStyle);
 
-const Component = ({ images }) => {
+const Component = ({ images, full }) => {
   const classes = useStyles();
   const [transform, setTransform] = React.useState('translate3d(0, 0px, 0)');
   const [image, setImage] = React.useState(null);
   const fade = useSpring({ opacity: 1, from: { opacity: 0 }, config: { duration: 2000 } });
-
-  const texts = {
-    profileName: 'Jonathan Reis',
-    profileDesc: 'Um desenvolvedor criativo',
-    // profileDesc: 'A creative developer',
-    profileDescBottom: 'Eu imagino e desenvolvo coisas úteis',
-    // profileDescBottom: 'I imagine and develop useful things',
-  };
 
   React.useEffect(() => {
     let imageArray = [];
@@ -131,7 +125,10 @@ const Component = ({ images }) => {
         transform: transform,
         ...fade,
       }}
-      className={classes.header}>
+      className={classNames({
+        [classes.full]: full,
+        [classes.header]: true,
+      })}>
       <Container maxWidth="md" disableGutters className={classes.container}>
         <Grid container></Grid>
       </Container>

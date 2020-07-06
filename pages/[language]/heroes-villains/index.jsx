@@ -108,7 +108,7 @@ const Index = (props) => {
       <Header images={[headerImage]} />
 
       <Section raised>
-        <SubSection maxWidth="md" color={'light_gray'}>
+        <SubSection raised maxWidth="md" color={'light_gray'}>
           <Grid container justify="center">
             <Text variant="h1" bold center>
               My list of heroes and villains:
