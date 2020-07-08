@@ -1,0 +1,18 @@
+{
+  "pt": {
+    "hyper_english": "Hyper English - Curso de ingles online",
+    "hyper_english_link": "https://www.hyperenglish.com.br",
+    "hyper_english_desc": "Faço parte de todo o desenvolvimento do sistema Hyper English, trabalhando em uma equipe composta de programadores e designers.<br />Implementei funcionalidades como 'Stream de Audio e Vídeo' voltados para o uso em aulas de conversação, reconhecimento e análise de voz, etc...<br />Mantendo e atualizando todas as tecnologias utilizadas para ter o sistema sempre nas versões mais novas e estáveis.<br />Tecnologias usadas: Git, ReactJs, React-Native, Ruby on Rails, SASS, PostgreSQL, Google Analytics, tarefas agendadas e outras.<br />Diversas bibliotecas como: Text Help, Speech Ace, TokBox, RecordRTC, Yapay/SuperPay.<br />Configuração de servidores AWS utilizando serviços como Elastic Beanstalk, ECS, RDS, SES, Code Build.<br />Uso de Metodologias ágeis, Scrum, Jira e Trello.",
+    "joaquina": "Cardápio Online do Restaurante Joaquina",
+    "joaquina_link": "https://cardapio.joaquinabar.com.br/",
+    "joaquina_desc": "A idéia surgiu nesse momento em que a população está com medo do 'corona-virus', pensando nisso, desenvolvi o cardápio online integrado com o QR-Code, para que os clientes não precisem tocar no cardápio do restaurante e assim evitar contatos desnecessários e se prevenir um pouco melhor.<br />O cardápio foi feito utilizando HTML e Javascript puro, porém ficou muito funcional e responsivo como podem ver acessando o link, além disso, o QR-Code foi gerado em alta qualidade para que pudesse ir para qualquer gráfica e assim ser colocado no display em acrílico, que foi colocado em cada mesa do restaurante."
+  },
+  "en": {
+    "hyper_english": "Hyper English - Online English Course",
+    "hyper_english_link": "https://www.hyperenglish.com.br",
+    "hyper_englis_desc": "I am part of the entire development of the Hyper English system, working in a team composed of programmers and designers. <br /> I implemented features such as 'Audio and Video Stream' used in conversation, speech recognition and analysis classes, etc. . <br /> Maintaining and updating all the technologies used to always have the system in the newest and most stable versions. <br /> Technologies used: Git, ReactJs, React-Native, Ruby on Rails, SASS, PostgreSQL, Google Analytics, scheduled tasks and others. <br /> Several libraries such as: Text Help, Speech Ace, TokBox, RecordRTC, Yapay / SuperPay. <br /> Configuring AWS servers using services such as Elastic Beanstalk, ECS, RDS, SES, Code Build. <br /> Use of agile methodologies, Scrum, Jira and Trello.",
+    "joaquina": "Joaquina Restaurant Online Menu",
+    "joaquina_link": "https://cardapio.joaquinabar.com.br/",
+    "joaquina_desc": "The idea came at that time when the population is afraid of the 'corona-virus', thinking about it, I developed the online menu integrated with the QR-Code, so that customers do not need to touch the restaurant menu and thus avoid unnecessary contacts and be a little better. <br /> The menu was made using HTML and pure Javascript, but it was very functional and responsive as you can see by accessing the link, in addition, the QR-Code was generated in high quality so you could go to any graphics and thus be placed on the acrylic display, which was placed on each restaurant table."
+  }
+}

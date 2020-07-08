@@ -18,7 +18,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 // My Components
-import SEO from 'components/Seo';
+import Seo from 'components/Seo';
 import GoogleAnalytics from 'components/GoogleAnalytics';
 import TopMenuBar from 'components/TopMenuBar/TopMenuBar';
 import Header from 'components/Containers/Header';
@@ -69,7 +69,7 @@ const useStyles = makeStyles(localStyle);
 const Index = (props) => {
   const classes = useStyles();
   const router = useRouter();
-  const language = get(props, 'params.language', 'pt-br');
+  const language = get(props, 'params.language', 'pt');
   const hero = get(props, 'items', null);
 
   const makeTable = (key, element) => {
@@ -152,7 +152,7 @@ const Index = (props) => {
 
   return (
     <>
-      <SEO />
+      <Seo />
       <GoogleAnalytics />
       <TopMenuBar />
       <Header images={[headerImage]} />
@@ -201,13 +201,13 @@ export const getStaticPaths = async () => {
     return [
       // {
       //   params: {
-      //     language: 'pt-br',
+      //     language: 'pt',
       //     page: [`${item.id}`, item.name.toLowerCase().replace(/ /g, '-')],
       //   },
       // },
       {
         params: {
-          language: 'en-us',
+          language: 'en',
           page: [`${item.id}`, item.name.toLowerCase().replace(/ /g, '-')],
         },
       },

@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 // My Components
-import SEO from 'components/Seo';
+import Seo from 'components/Seo';
 import GoogleAnalytics from 'components/GoogleAnalytics';
 import TopMenuBar from 'components/TopMenuBar/TopMenuBar';
 import Header from 'components/Containers/Header';
@@ -60,7 +60,7 @@ const Index = (props) => {
 
   return (
     <>
-      {/* <SEO /> */}
+      {/* <Seo /> */}
       {/* <GoogleAnalytics /> */}
       <TopMenuBar />
       <Header />
@@ -74,7 +74,7 @@ const Index = (props) => {
           </Grid>
 
           <Grid container justify="center">
-            <CustomLink href="/[language]/heroes-villains" as="/en-us/heroes-villains">
+            <CustomLink href="/[language]/heroes-villains" as="/en/heroes-villains">
               <Text>Go to page</Text>
             </CustomLink>
           </Grid>

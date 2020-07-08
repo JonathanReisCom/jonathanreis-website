@@ -97,7 +97,7 @@ const useStyles = makeStyles(localStyle);
 
 const Component = (props) => {
   const classes = useStyles();
-  const language = get(props, 'params.language', 'pt-br');
+  const language = get(props, 'params.language', 'pt');
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   React.useEffect(() => {

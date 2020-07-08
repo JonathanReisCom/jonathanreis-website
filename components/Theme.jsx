@@ -4,12 +4,14 @@ import red from '@material-ui/core/colors/red';
 const colors = {
   text: {
     primary: '#3C4858',
+    body1: '#666',
     secondary: 'rgba(0, 0, 0, 0.54)',
     disabled: 'rgba(0, 0, 0, 0.38)',
     hint: 'rgba(0, 0, 0, 0.38)',
     menubar: '#fff',
   },
-  primaryColor: '#9DCCEF',
+  primary: '#9DCCEF',
+  secondary: '#ff9800',
   backgroundPaperColor: '#fff',
   // NOT IN USE
   warningColor: '#ff9800',
@@ -26,6 +28,8 @@ const gradients = {
     blackLinear: '-webkit-linear-gradient(#585858, #000)',
     blackRadial: 'radial-gradient(#9DCCEF, #585858)',
     orange: '-webkit-linear-gradient(#fde04c, #ffc900)',
+    blue: '-webkit-linear-gradient(#6C63AB, #4C4199)',
+    rose: '-webkit-linear-gradient(#FF528B, #FF276F)',
   },
 };
 // breakpoints: Object
@@ -44,16 +48,16 @@ const gradients = {
 
 const sizes = {
   typography: {
-    lineHeight: '1.4',
+    lineHeight: '1.55',
     // FONT SIZES
-    h1: '2.5rem',
-    h2: '2rem',
+    h1: '3.0rem',
+    h2: '2.25rem',
     h3: '1.75rem',
     h4: '1.5rem',
     h5: '1.25rem',
     h6: '1rem',
     button: '0.65rem',
-    body1: '1rem',
+    body1: '1.0625rem',
     body2: '0.875rem',
   },
   position: {
@@ -103,6 +107,7 @@ const typography = {
       fontSize: sizes.typography.body1,
       fontWeight: '300',
       lineHeight: `calc(${sizes.typography.body1} * ${sizes.typography.lineHeight})`,
+      color: colors.text.body1,
     },
     body2: {
       fontSize: sizes.typography.body2,
@@ -152,10 +157,10 @@ const theme = createMuiTheme({
   sizes: { ...sizes.position },
   palette: {
     primary: {
-      main: colors.primaryColor,
+      main: colors.primary,
     },
     secondary: {
-      main: '#19857b',
+      main: colors.secondary,
     },
     error: {
       main: red.A400,

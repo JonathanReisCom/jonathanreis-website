@@ -7,12 +7,16 @@ import Link from 'next/link';
 import classNames from 'classnames';
 import { Url } from 'url';
 
-export const CustomLink = ({ children, href, as, passHref }) => {
+export const CustomLink = ({ children, href, as, passHref, target }) => {
   if (process.env.NEED_DIRECT_LINK) {
-    return <a href={`${process.env.APP_URL}${as}`}>{children}</a>;
+    return (
+      <a href={`${process.env.APP_URL}${as}`} target={target}>
+        {children}
+      </a>
+    );
   }
   return (
-    <Link href={href} as={as} passHref>
+    <Link href={href} as={as} passHref={passHref} /*target={target}*/>
       <a>{children}</a>
     </Link>
   );

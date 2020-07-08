@@ -15,17 +15,26 @@ const localStyle = {
   center: { textAlign: 'center' },
   right: { textAlign: 'right' },
   left: { textAlign: 'left' },
+  white: { color: 'white' },
+  margin: {
+    marginTop: '1rem',
+    marginBottom: '1rem',
+  },
 };
 const useStyles = makeStyles(localStyle);
 
-const Component = ({ children, bold, center, className, ...props }) => {
+const Component = ({ children, bold, center, left, right, white, margin, className, ...props }) => {
   const classes = useStyles();
   return (
     <Typography
       className={classNames({
         [classes.center]: center,
+        [classes.left]: left,
+        [classes.right]: right,
         [classes.bold]: bold,
         [className]: className,
+        [classes.white]: white,
+        [classes.margin]: margin,
       })}
       {...props}>
       {children}

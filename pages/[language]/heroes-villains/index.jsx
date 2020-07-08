@@ -11,7 +11,7 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 import Pagination from '@material-ui/lab/Pagination';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 // My Components
-import SEO from 'components/Seo';
+import Seo from 'components/Seo';
 import GoogleAnalytics from 'components/GoogleAnalytics';
 import TopMenuBar from 'components/TopMenuBar/TopMenuBar';
 import Header from 'components/Containers/Header';
@@ -69,7 +69,7 @@ const useStyles = makeStyles(localStyle);
 const Index = (props) => {
   const classes = useStyles();
   const router = useRouter();
-  const language = get(props, 'params.language', 'pt-br');
+  const language = get(props, 'params.language', 'pt');
   const pageFromLink = Number(get(router, 'query.page'));
   const isBreakpointXS = useMediaQuery(theme.breakpoints.down('xs'));
   const items = get(props, 'items', []);
@@ -102,7 +102,7 @@ const Index = (props) => {
 
   return (
     <>
-      <SEO />
+      <Seo />
       <GoogleAnalytics />
       <TopMenuBar />
       <Header images={[headerImage]} />
@@ -174,7 +174,7 @@ const Index = (props) => {
 
 // It is related to the url and the number of pages that will be created
 export const getStaticPaths = async () => {
-  const paths = [{ params: { language: 'en-us' } }];
+  const paths = [{ params: { language: 'en' } }];
   return {
     fallback: false,
     paths: paths,

@@ -13,6 +13,9 @@ const localStyle = {
     paddingTop: padding,
     paddingBottom: padding,
     position: 'relative',
+    '& + &': {
+      marginTop: '-10px',
+    },
   },
   full: {
     minHeight: '100vh',
@@ -92,7 +95,7 @@ const Component = (props) => {
         [classes.noPadding]: props.noPadding,
       })}>
       {divColored}
-      <Container maxWidth={maxWidth()} disableGutters className={classes.relative}>
+      <Container maxWidth={maxWidth()} disableGutters={props.disableGutters} className={classes.relative}>
         {props.children}
       </Container>
     </div>
