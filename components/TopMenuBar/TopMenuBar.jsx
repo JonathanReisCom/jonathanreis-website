@@ -64,7 +64,7 @@ const localStyle = {
   },
   toolbarEnd: {
     height: '100%',
-    overflow: 'hidden',
+    // overflow: 'hidden',
   },
   brand: {
     height: '100%',

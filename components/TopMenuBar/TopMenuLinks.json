@@ -1,0 +1,22 @@
+{
+  "pt": {
+    "language": "Portugues",
+    "change_language": "Mude o idioma deste site",
+    "github_link": "https://github.com/JonathanReisCom",
+    "github_tooltip": "Meu Github",
+    "linkedin_link": "https://www.linkedin.com/in/jonathan-reis-com/",
+    "linkedin_tooltip": "Me siga no LinkedIn",
+    "instagram_link": "https://www.instagram.com/jonathanreis/",
+    "instagram_tooltip": "Me siga no Instagram"
+  },
+  "en": {
+    "language": "English",
+    "change_language": "Change the language for this site",
+    "github_link": "https://github.com/JonathanReisCom",
+    "github_tooltip": "My Github",
+    "linkedin_link": "https://www.linkedin.com/in/jonathan-reis-com/",
+    "linkedin_tooltip": "Follow me on LinkedIn",
+    "instagram_link": "https://www.instagram.com/jonathanreis/",
+    "instagram_tooltip": "Follow me on Instagram"
+  }
+}

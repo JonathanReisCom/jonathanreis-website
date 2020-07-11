@@ -19,16 +19,22 @@ import Menu from '@material-ui/icons/Menu';
 import Instagram from '@material-ui/icons/Instagram';
 import LinkedIn from '@material-ui/icons/LinkedIn';
 import GitHub from '@material-ui/icons/GitHub';
+import Translate from '@material-ui/icons/EditLocation';
 // Lodash
 import get from 'lodash/get';
 // My Components
-
+import Text from 'components/Text';
+import DropDown from './DropDown';
+import { ButtonBase, CustomLink } from 'components/Links';
+import { findLanguage, setLanguageInLocalStorage } from '../../lib/language';
 // Images
 import logo from 'assets/images/logo-jonathan-reis-com.png';
 
+// Texts
+import textLanguage from './TopMenuLinks.json';
+
 // Style
 import theme from 'components/Theme';
-
 const localStyle = {
   list: {
     height: '100%',
@@ -69,38 +75,95 @@ const useStyles = makeStyles(localStyle);
 
 const Component = (props) => {
   const classes = useStyles();
-  const language = get(props, 'params.language', 'pt');
+  // const language = get(props, 'params.language', 'pt');
 
-  const links = {
-    github: {
-      href: 'https://github.com/JonathanReisCom',
-      target: '_blank',
-      tooltip: 'Meu Github',
-    },
-    linkedin: {
-      href: 'https://www.linkedin.com/in/jonathan-reis-com/',
-      target: '_blank',
-      tooltip: 'Me siga no LinkedIn',
-    },
+  const [language, setLanguage] = React.useState(null);
+  const [texts, setTexts] = React.useState({});
+  React.useEffect(() => {
+    setLanguage(findLanguage());
+  }, []);
+  React.useEffect(() => {
+    setTexts(textLanguage[language] || {});
+  }, [language]);
 
-    instagram: {
-      href: 'https://www.instagram.com/jonathanreis/',
-      target: '_blank',
-      tooltip: 'Me siga no Instagram',
-    },
+  // const links = {
+  //   github: {
+  //     href: 'https://github.com/JonathanReisCom',
+  //     target: '_blank',
+  //     tooltip: 'Meu Github',
+  //   },
+  //   linkedin: {
+  //     href: 'https://www.linkedin.com/in/jonathan-reis-com/',
+  //     target: '_blank',
+  //     tooltip: 'Me siga no LinkedIn',
+  //   },
+
+  //   instagram: {
+  //     href: 'https://www.instagram.com/jonathanreis/',
+  //     target: '_blank',
+  //     tooltip: 'Me siga no Instagram',
+  //   },
+  // };
+
+  // Tooltip language Controll Start
+  const [tooltipLanguageOpen, setTooltipLanguageOpen] = React.useState({ open: false, blocked: false });
+  const handleTooltipClose = () => {
+    if (!tooltipLanguageOpen.blocked)
+      setTooltipLanguageOpen({ open: false, blocked: tooltipLanguageOpen.blocked });
+  };
+  const handleTooltipOpen = () => {
+    if (!tooltipLanguageOpen.blocked)
+      setTooltipLanguageOpen({ open: true, blocked: tooltipLanguageOpen.blocked });
+  };
+  const handleTooltipBlock = (open, blocked) => {
+    setTooltipLanguageOpen({ open: open, blocked: blocked });
+  };
+  // Tooltip language Controll End
+
+  const changeLanguage = (language) => {
+    console.log('changeLanguage', language);
+    setLanguageInLocalStorage(language);
+    window.location.reload();
   };
 
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
+        {/* Language Button */}
+
+        <Tooltip
+          id="language-tooltip"
+          title={`${texts.change_language}`}
+          placement={'bottom'}
+          open={tooltipLanguageOpen.open}
+          onClose={handleTooltipClose}
+          onOpen={handleTooltipOpen}
+          arrow
+          classes={{ tooltip: classes.tooltip }}>
+          <DropDown
+            className={classes.listButton}
+            onOpen={handleTooltipBlock}
+            navDropdown
+            buttonText={`${texts.language}`}
+            caret={true}
+            hoverColor="primary"
+            ButtonIcon={Translate}
+            dropdownList={[
+              <Text onClick={() => changeLanguage('en')}>English</Text>,
+              <Text onClick={() => changeLanguage('pt')}>Português</Text>,
+              //
+            ]}
+          />
+        </Tooltip>
+
         {/* LinkedIn Button */}
         <Tooltip
           id="gitHub-tooltip"
-          title={links.github.tooltip}
-          placement={'top'}
+          title={`${texts.github_tooltip}`}
+          placement={'bottom'}
           arrow
           classes={{ tooltip: classes.tooltip }}>
-          <Button className={classes.listButton} href={links.github.href} target={links.github.target}>
+          <Button className={classes.listButton} href={`${texts.github_link}`} target={'_blank'}>
             <GitHub className={classes.icons} />
           </Button>
         </Tooltip>
@@ -108,11 +171,11 @@ const Component = (props) => {
         {/* LinkedIn Button */}
         <Tooltip
           id="linkedin-tooltip"
-          title={links.linkedin.tooltip}
-          placement={'top'}
+          title={`${texts.linkedin_tooltip}`}
+          placement={'bottom'}
           arrow
           classes={{ tooltip: classes.tooltip }}>
-          <Button className={classes.listButton} href={links.linkedin.href} target={links.linkedin.target}>
+          <Button className={classes.listButton} href={`${texts.linkedin_link}`} target={'_blank'}>
             <LinkedIn className={classes.icons} />
           </Button>
         </Tooltip>
@@ -120,11 +183,11 @@ const Component = (props) => {
         {/* Instagram Button */}
         <Tooltip
           id="instagram-tooltip"
-          title={links.instagram.tooltip}
-          placement={'top'}
+          title={`${texts.instagram_tooltip}`}
+          placement={'bottom'}
           arrow
           classes={{ tooltip: classes.tooltip }}>
-          <Button className={classes.listButton} href={links.instagram.href} target={links.instagram.target}>
+          <Button className={classes.listButton} href={`${texts.instagram_link}`} target={'_blank'}>
             <Instagram className={classes.icons} />
           </Button>
         </Tooltip>

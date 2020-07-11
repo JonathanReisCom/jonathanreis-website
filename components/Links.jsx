@@ -46,15 +46,15 @@ export const ChangeLink = ({ href, as, query }) => {
   }
 };
 
-export const ButtonBase = ({ children, href, as, ...props }) => {
+export const ButtonBase = React.forwardRef(({ children, href, as, ...props }, ref) => {
   let _href = as;
   if (process.env.NEED_DIRECT_LINK) {
     _href = `${process.env.APP_URL}${as}`;
   }
 
   return (
-    <Base href={_href} {...props}>
+    <Base ref={ref} href={_href} {...props}>
       {children}
     </Base>
   );
-};
+});

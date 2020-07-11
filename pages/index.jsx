@@ -4,11 +4,6 @@ import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-// Detect Browser Langage
-// import i18next from 'i18next';
-// import LanguageDetector from 'i18next-browser-languagedetector';
-// import { initReactI18next } from 'react-i18next';
-
 // My Components
 import Seo from 'components/Seo';
 import GoogleAnalytics from 'components/GoogleAnalytics';
@@ -43,8 +38,8 @@ const useStyles = makeStyles(localStyle);
 
 const Index = (props) => {
   const classes = useStyles();
-  const [language, setLanguage] = React.useState([]);
 
+  const [language, setLanguage] = React.useState(null);
   React.useEffect(() => {
     setLanguage(findLanguage());
   }, []);
@@ -58,16 +53,19 @@ const Index = (props) => {
 
       <Section raised>
         <SubSection raised maxWidth="md" color={'light_gray'}>
-          <Grid container justify="center">
+          <Grid container direction="column" justify="center">
             <Text variant="h1" bold center>
               Index Principal - {JSON.stringify(language)}
             </Text>
+            <Text variant="body1" bold center>
+              Params - {JSON.stringify(props)}
+            </Text>
           </Grid>
 
-          <Grid container justify="center">
+          <Grid container direction="column" alignItems="center">
             <ButtonBase
               href={'/[language]/portfolio'}
-              as={'/en/portfolio'}
+              as={`/${language}/portfolio`}
               style={{ borderRadius: '30px', background: theme.gradients.orange, padding: '6px 16px' }}>
               <Text variant="button" center>
                 Portfolio
@@ -76,7 +74,7 @@ const Index = (props) => {
 
             <ButtonBase
               href={'/[language]/heroes-villains'}
-              as={'/en/heroes-villains'}
+              as={'/en/heroes-villains'} // TEMP: "en" is a fixed language for this page
               style={{ borderRadius: '30px', background: theme.gradients.orange, padding: '6px 16px' }}>
               <Text variant="button" center>
                 Heroes and Villains

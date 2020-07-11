@@ -92,7 +92,7 @@ const Component = ({ images, full }) => {
   const classes = useStyles();
   const [transform, setTransform] = React.useState('translate3d(0, 0px, 0)');
   const [image, setImage] = React.useState(null);
-  const fade = useSpring({ opacity: 1, from: { opacity: 0 }, config: { duration: 2000 } });
+  const fade = useSpring({ opacity: 1, from: { opacity: 0 }, config: { duration: 500 } });
 
   React.useEffect(() => {
     let imageArray = [];
