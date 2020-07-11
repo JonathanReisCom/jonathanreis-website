@@ -2,9 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+// Detect Browser Langage
+// import i18next from 'i18next';
+// import LanguageDetector from 'i18next-browser-languagedetector';
+// import { initReactI18next } from 'react-i18next';
+
 // My Components
 import Seo from 'components/Seo';
 import GoogleAnalytics from 'components/GoogleAnalytics';
@@ -15,7 +19,10 @@ import SubSection from 'components/Containers/SubSection';
 import Text from 'components/Text';
 import Profile from 'components/SubSections/Profile';
 import GithubChart from '../components/SubSections/GithubChart';
-import { CustomLink } from 'components/Links';
+import { ButtonBase, CustomLink } from 'components/Links';
+import { findLanguage } from '../lib/language';
+// Lodash
+import get from 'lodash/get';
 
 // Style
 import theme from 'components/Theme';
@@ -36,27 +43,11 @@ const useStyles = makeStyles(localStyle);
 
 const Index = (props) => {
   const classes = useStyles();
+  const [language, setLanguage] = React.useState([]);
 
-  const textDefault = 'Lorem ipsum dolor sit amet';
-
-  const loremIpsun =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero ex, tristique sit amet diam vel, vestibulum gravida nulla. Pellentesque quam nibh, mollis ut felis ut, fermentum pretium mauris. Praesent malesuada, dui nec posuere pulvinar, justo diam pellentesque enim, ut tristique nisi';
-
-  const textElements = [
-    'h1',
-    'h2',
-    'h3',
-    'h4',
-    'h5',
-    'h6',
-    'subtitle1',
-    'subtitle2',
-    'body1',
-    'body2',
-    'button',
-    'caption',
-    'overline',
-  ];
+  React.useEffect(() => {
+    setLanguage(findLanguage());
+  }, []);
 
   return (
     <>
@@ -69,14 +60,28 @@ const Index = (props) => {
         <SubSection raised maxWidth="md" color={'light_gray'}>
           <Grid container justify="center">
             <Text variant="h1" bold center>
-              Index Principal
+              Index Principal - {JSON.stringify(language)}
             </Text>
           </Grid>
 
           <Grid container justify="center">
-            <CustomLink href="/[language]/heroes-villains" as="/en/heroes-villains">
-              <Text>Go to page</Text>
-            </CustomLink>
+            <ButtonBase
+              href={'/[language]/portfolio'}
+              as={'/en/portfolio'}
+              style={{ borderRadius: '30px', background: theme.gradients.orange, padding: '6px 16px' }}>
+              <Text variant="button" center>
+                Portfolio
+              </Text>
+            </ButtonBase>
+
+            <ButtonBase
+              href={'/[language]/heroes-villains'}
+              as={'/en/heroes-villains'}
+              style={{ borderRadius: '30px', background: theme.gradients.orange, padding: '6px 16px' }}>
+              <Text variant="button" center>
+                Heroes and Villains
+              </Text>
+            </ButtonBase>
           </Grid>
         </SubSection>
       </Section>

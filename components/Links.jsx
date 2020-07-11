@@ -2,6 +2,8 @@ import React from 'react';
 // NextJs
 import Router from 'next/router';
 import Link from 'next/link';
+// @material-ui/core components
+import Base from '@material-ui/core/ButtonBase';
 
 // nodejs libraries
 import classNames from 'classnames';
@@ -42,4 +44,17 @@ export const ChangeLink = ({ href, as, query }) => {
       { shallow: true }
     );
   }
+};
+
+export const ButtonBase = ({ children, href, as, ...props }) => {
+  let _href = as;
+  if (process.env.NEED_DIRECT_LINK) {
+    _href = `${process.env.APP_URL}${as}`;
+  }
+
+  return (
+    <Base href={_href} {...props}>
+      {children}
+    </Base>
+  );
 };
