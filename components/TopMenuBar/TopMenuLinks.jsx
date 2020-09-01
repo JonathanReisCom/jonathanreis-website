@@ -1,6 +1,7 @@
 import React from 'react';
 // NextJS
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -25,7 +26,7 @@ import get from 'lodash/get';
 // My Components
 import Text from 'components/Text';
 import DropDown from './DropDown';
-import { ButtonBase, CustomLink } from 'components/Links';
+import { formatLink, ButtonBase, CustomLink } from 'components/Links';
 import { findLanguage, setLanguageInLocalStorage } from '../../lib/language';
 // Images
 import logo from 'assets/images/logo-jonathan-reis-com.png';
@@ -75,35 +76,36 @@ const useStyles = makeStyles(localStyle);
 
 const Component = (props) => {
   const classes = useStyles();
-  // const language = get(props, 'params.language', 'pt');
+  const router = useRouter();
 
   const [language, setLanguage] = React.useState(null);
   const [texts, setTexts] = React.useState({});
   React.useEffect(() => {
+    // TODO: PRECISO BUSCAR AS POSSIBILIDADES DA PAGINA
     setLanguage(findLanguage());
   }, []);
   React.useEffect(() => {
     setTexts(textLanguage[language] || {});
   }, [language]);
 
-  // const links = {
-  //   github: {
-  //     href: 'https://github.com/JonathanReisCom',
-  //     target: '_blank',
-  //     tooltip: 'Meu Github',
-  //   },
-  //   linkedin: {
-  //     href: 'https://www.linkedin.com/in/jonathan-reis-com/',
-  //     target: '_blank',
-  //     tooltip: 'Me siga no LinkedIn',
-  //   },
+  const changeLanguage = (language) => {
+    console.log('changeLanguage', language);
+    setLanguageInLocalStorage(language);
+    setLanguage(language);
 
-  //   instagram: {
-  //     href: 'https://www.instagram.com/jonathanreis/',
-  //     target: '_blank',
-  //     tooltip: 'Me siga no Instagram',
-  //   },
-  // };
+    const path = `components["${router.pathname}"].props.pageProps.possible_languages`;
+    const possibleLanguages = get(router, path, []);
+
+    if (possibleLanguages.includes(language)) {
+      router.push(
+        { pathname: router.pathname, query: { ...router.query, language: language } },
+        { pathname: router.asPath.replace(`/${router.query.language}/`, `/${language}/`) }
+      );
+    } else {
+      console.log('Apenas um reload');
+    }
+    // window.location.reload();
+  };
 
   // Tooltip language Controll Start
   const [tooltipLanguageOpen, setTooltipLanguageOpen] = React.useState({ open: false, blocked: false });
@@ -119,12 +121,6 @@ const Component = (props) => {
     setTooltipLanguageOpen({ open: open, blocked: blocked });
   };
   // Tooltip language Controll End
-
-  const changeLanguage = (language) => {
-    console.log('changeLanguage', language);
-    setLanguageInLocalStorage(language);
-    window.location.reload();
-  };
 
   return (
     <List className={classes.list}>
@@ -149,8 +145,8 @@ const Component = (props) => {
             hoverColor="primary"
             ButtonIcon={Translate}
             dropdownList={[
-              <Text onClick={() => changeLanguage('en')}>English</Text>,
-              <Text onClick={() => changeLanguage('pt')}>Português</Text>,
+              <Text onClick={() => changeLanguage('en')}>{`${textLanguage.en.language}`}</Text>,
+              <Text onClick={() => changeLanguage('pt')}>{`${textLanguage.pt.language}`}</Text>,
               //
             ]}
           />

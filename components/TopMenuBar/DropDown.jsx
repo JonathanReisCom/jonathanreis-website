@@ -325,9 +325,4 @@ const Dropdown = React.forwardRef(
   }
 );
 
-// const Asd = React.forwardRef((props, ref) => <Dropdown ref={ref} {...props} />);
-// export default Asd;
-// export default React.forwardRef((props, ref) => <Dropdown ref={ref} {...props} />);
-
-// export default React.forwardRef((props, ref) => <Dropdown />);
 export default Dropdown;

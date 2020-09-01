@@ -186,6 +186,7 @@ export const getStaticProps = async ({ params }) => {
   const data = await getAllHeroesIndex();
   const props = {
     params: params,
+    possible_languages: ['en'],
     items: data,
   };
   return { props: props };

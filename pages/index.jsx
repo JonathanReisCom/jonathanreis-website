@@ -19,6 +19,9 @@ import { findLanguage } from '../lib/language';
 // Lodash
 import get from 'lodash/get';
 
+// Texts
+import textLanguage from './index.json';
+
 // Style
 import theme from 'components/Theme';
 const localStyle = {
@@ -40,9 +43,13 @@ const Index = (props) => {
   const classes = useStyles();
 
   const [language, setLanguage] = React.useState(null);
+  const [texts, setTexts] = React.useState({});
   React.useEffect(() => {
     setLanguage(findLanguage());
   }, []);
+  React.useEffect(() => {
+    setTexts(textLanguage[language] || {});
+  }, [language]);
 
   return (
     <>
@@ -58,7 +65,7 @@ const Index = (props) => {
               Index Principal - {JSON.stringify(language)}
             </Text>
             <Text variant="body1" bold center>
-              Params - {JSON.stringify(props)}
+              Params - {JSON.stringify(texts)}
             </Text>
           </Grid>
 

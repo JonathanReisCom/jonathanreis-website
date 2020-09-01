@@ -1,0 +1,10 @@
+{
+  "pt": {
+    "desc": "Site em portugues",
+    "nothing": "nada"
+  },
+  "en": {
+    "desc": "English site",
+    "nothing": "nothing"
+  }
+}

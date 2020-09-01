@@ -9,6 +9,20 @@ import Base from '@material-ui/core/ButtonBase';
 import classNames from 'classnames';
 import { Url } from 'url';
 
+export const formatLink = (href, as) => {
+  let res = {
+    href: href,
+    as: as,
+  };
+
+  if (process.env.NEED_DIRECT_LINK) {
+    // res.href = `${process.env.APP_URL}${href}`;
+    // res.as = `${process.env.APP_URL}${as}`;
+  }
+
+  return res;
+};
+
 export const CustomLink = ({ children, href, as, passHref, target }) => {
   if (process.env.NEED_DIRECT_LINK) {
     return (
@@ -47,11 +61,14 @@ export const ChangeLink = ({ href, as, query }) => {
 };
 
 export const ButtonBase = React.forwardRef(({ children, href, as, ...props }, ref) => {
-  let _href = as;
-  if (process.env.NEED_DIRECT_LINK) {
-    _href = `${process.env.APP_URL}${as}`;
+  let _href = null;
+  if (href && as) {
+    _href = as;
+    if (process.env.NEED_DIRECT_LINK) {
+      _href = `${process.env.APP_URL}${as}`;
+    }
   }
-
+  // return null;
   return (
     <Base ref={ref} href={_href} {...props}>
       {children}

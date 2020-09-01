@@ -227,6 +227,7 @@ export const getStaticProps = async ({ params }) => {
 
   const props = {
     params: params,
+    possible_languages: ['en'],
     items: data,
   };
   return { props: props };

@@ -162,6 +162,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const props = {
     params: params,
+    possible_languages: ['en', 'pt'],
   };
   return { props: props };
 };
