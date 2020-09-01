@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F[language]","\u002F[language]\u002Fportfolio","\u002F[language]\u002Fbio","\u002F[language]\u002Fheroes-villains","\u002F[language]\u002Fheroes-villains\u002F[...page]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
