@@ -1,9 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
+
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+
+// nodejs library that concatenates classes
+import classNames from 'classnames';
+
 // My Components
 import Seo from 'components/Seo';
 import GoogleAnalytics from 'components/GoogleAnalytics';
@@ -16,6 +21,10 @@ import Profile from 'components/SubSections/Profile';
 import GithubChart from '../components/SubSections/GithubChart';
 import { ButtonBase, CustomLink } from 'components/Links';
 import { findLanguage } from '../lib/language';
+
+// Spring for animations
+import { useTransition, animated, config } from 'react-spring';
+
 // Lodash
 import get from 'lodash/get';
 
@@ -36,12 +45,46 @@ const localStyle = {
   paper: {
     padding: 16,
   },
+
+  header: {
+    background: theme.gradients.black,
+    height: 400,
+    overflow: 'hidden',
+    backgroundPosition: 'center top',
+    backgroundSize: 'cover',
+    margin: '0',
+    padding: '0',
+    display: 'flex',
+  },
+  full: {
+    height: '100vh',
+    width: '100vw',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    willChange: 'opacity',
+  },
+
+  glass: {
+    // boxShadow: `1px 1px ${theme.palette.primary.main}`,
+    backgroundColor: 'rgba(50,50,50,0.6)',
+    zIndex: 2,
+    width: '100%',
+    height: '80px',
+    bottom: '100px',
+    position: 'fixed',
+    color: 'white',
+    display: 'flex',
+  },
 };
 const useStyles = makeStyles(localStyle);
 
 const Index = (props) => {
   const classes = useStyles();
 
+  // LANGUAGE
   const [language, setLanguage] = React.useState(null);
   const [texts, setTexts] = React.useState({});
   React.useEffect(() => {
@@ -51,14 +94,57 @@ const Index = (props) => {
     setTexts(textLanguage[language] || {});
   }, [language]);
 
+  // BACKGROUND
+  const imageArray = [
+    { id: 0, url: require('public/img/hyper-english-cover.jpg') },
+    { id: 1, url: require('public/img/bg-marvel-vs-dc-heroes.jpg') },
+  ];
+  const [imageController, setImageController] = React.useState(0);
+  const transitions = useTransition(imageArray[imageController], (item) => item.id, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: config.molasses,
+  });
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setImageController((x) => (x + 1) % imageArray.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <>
       {/* <Seo /> */}
       {/* <GoogleAnalytics /> */}
       <TopMenuBar />
-      <Header />
 
-      <Section raised>
+      <div
+        className={classNames({
+          [classes.glass]: true,
+        })}>
+        <Text variant="h3" bold center style={{ margin: 'auto' }}>
+          Index Principal - {JSON.stringify(language)} - {imageController}
+        </Text>
+        <Text variant="body1" bold center>
+          Params - {JSON.stringify(texts)}
+        </Text>
+      </div>
+
+      {transitions.map(({ item, props, key }) => (
+        <animated.div
+          key={key}
+          className={classNames({
+            [classes.full]: true,
+            [classes.header]: true,
+          })}
+          style={{
+            ...props,
+            backgroundImage: item.url ? 'url(' + item.url + ')' : null,
+          }}></animated.div>
+      ))}
+
+      {/* <Section raised>
         <SubSection raised maxWidth="md" color={'light_gray'}>
           <Grid container direction="column" justify="center">
             <Text variant="h1" bold center>
@@ -89,12 +175,12 @@ const Index = (props) => {
             </ButtonBase>
           </Grid>
         </SubSection>
-      </Section>
+      </Section> */}
 
-      <Section raised>
-        {/* <Profile /> */}
-        {/* <GithubChart /> */}
-      </Section>
+      {/* <Section raised>
+        <Profile />
+        <GithubChart />
+      </Section> */}
 
       {/* <SubSection color={'red'} overBottom> */}
       {/* <Grid container>

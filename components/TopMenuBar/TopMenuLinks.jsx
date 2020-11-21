@@ -103,8 +103,8 @@ const Component = (props) => {
       );
     } else {
       console.log('Apenas um reload');
+      window.location.reload();
     }
-    // window.location.reload();
   };
 
   // Tooltip language Controll Start
