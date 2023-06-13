@@ -86,5 +86,3 @@ Made with ♥ by Jonathan Reis :wave: [Get in touch!](www.linkedin.com/in/jonath
 [vc]: https://code.visualstudio.com/
 [vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
 [vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-
-asd
